@@ -2,7 +2,7 @@
 
 Before going any further, you will find in this section a set of tools that will be essential for the rest of the project.
 
-## **Text editor**
+## **The text editor**
 
 A text editor is software designed for creating and editing text files.There are many solutions \(each programmer has his favorite\). We propose 4 of them:
 

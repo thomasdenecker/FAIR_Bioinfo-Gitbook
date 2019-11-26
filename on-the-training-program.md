@@ -20,11 +20,12 @@ The document is divided into sessions, each one bringing an additional level of 
 
 Here is the schedule of the 8 sessions presented with the objectives of acquiring skills, concerning on the one hand the FAIR principles \(FAIR\) and on the other hand the application to the analysis workflow \(WF\) :
 
-* **Session 1: The code memory**
-  * FAIR: initiation to Git & Github
-* **Session 2: This is not magic**
+* **Session 1: This is not magic**
   * FAIR: open a terminal, retrieve data \(wget, ascp, md5sum\)
   * WF: inputs
+* **Session 2: The code memory**
+  * FAIR: initiation to Git & Github
+  * WF: save the script to get inputs
 * **Session 3: Play with analysis tools**
   * FAIR: tools installation \(conda\)
   * WF: from the fastq file to the table of accounts \(FastQC, bowtie2, samtools, HTseq-counts\)

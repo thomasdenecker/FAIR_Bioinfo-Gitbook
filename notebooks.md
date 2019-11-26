@@ -322,8 +322,7 @@ You can copy markdown link and paste this link in your README. Thus, you have a 
 
 Binder works with Docker. It automatically builds a Docker image if it detects a Dockerfile in the repository. Be careful, the launch can be a little long depending on the size of the image to be created. the following Dockerfile allows you to launch a Jupyter R notebook on Binder : 
 
-{% code-tabs %}
-{% code-tabs-item title="Dockerfile" %}
+{% code title="Dockerfile" %}
 ```text
 FROM rocker/binder
 
@@ -335,8 +334,7 @@ RUN chown -R ${NB_USER} ${HOME}
 ## Become normal user again
 USER ${NB_USER}
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 If we put binder on our FAIR\_bioinfo repo, it reconstructs the image from the Dockerfile file
 

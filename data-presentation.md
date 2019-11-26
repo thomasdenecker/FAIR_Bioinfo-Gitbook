@@ -1,4 +1,4 @@
-# Data presentation
+# Presentation of the data
 
 In this training, we will use data available in the literature to illustrate in a concrete case the implementation of a reproducible analytical solution. The objective is to carry out a differential gene expression analysis using RNAseq data in _O. tauri_.
 
@@ -28,7 +28,7 @@ The organism studied is _Ostreococcus tauri_  and the available data are data fr
 Data stand in "fastq" formated file where one sequence is described by 4 lines: 
 
 * sequence identifier 
-* sequence in base
+* sequence bases
 * "+" 
 * base calling score, one letter code for each base
 

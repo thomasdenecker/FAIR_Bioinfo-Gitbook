@@ -20,15 +20,15 @@ The documentation is available here : [https://pages.github.com/](https://pages.
 
 In Github, go to `Settings > Options > Github pages` 
 
-![](.gitbook/assets/image%20%2848%29.png)
+![](.gitbook/assets/image%20%2849%29.png)
 
 The first step is to select a source \(the master branch or the docs folder in the master branch\). Her, our README file is un master branch.
 
-![Sources](.gitbook/assets/image%20%2822%29.png)
+![Sources](.gitbook/assets/image%20%2823%29.png)
 
  After you select a theme. This theme will be the template applied to generate your web page.
 
-![Themes](.gitbook/assets/image%20%2824%29.png)
+![Themes](.gitbook/assets/image%20%2825%29.png)
 
 Once these choices are made, Github converts your README into a web page and generates an address to access it.
 
@@ -67,7 +67,7 @@ First , It is necessary to create a docs/ folder. The home page file must be ind
 
 Then, as before, all that remains is to change the source \(master branch /docs folder\) and not to choose a theme.
 
-![](.gitbook/assets/image%20%28198%29.png)
+![](.gitbook/assets/image%20%28208%29.png)
 
 You find a complete example [here](https://thomasdenecker.github.io/bPeaks-application/).
 
@@ -77,19 +77,19 @@ The purpose of a license is to determine whether users can use, modify and distr
 
 1- Create a new file 
 
-![](.gitbook/assets/image%20%2857%29.png)
+![](.gitbook/assets/image%20%2858%29.png)
 
 When you name this file LICENSE, Github offers you to use license templates
 
-![](.gitbook/assets/image%20%28186%29.png)
+![](.gitbook/assets/image%20%28196%29.png)
 
 All you have to do is choose the right license for your project and Github will take care of the rest!
 
-![](.gitbook/assets/image%20%28154%29.png)
+![](.gitbook/assets/image%20%28161%29.png)
 
 Once you have validated and then merged with the main branch, your license will be ready. When you click on it, you will get something like the following image :
 
-![](.gitbook/assets/image%20%28197%29.png)
+![](.gitbook/assets/image%20%28207%29.png)
 
 ### Create a release 
 
@@ -97,11 +97,11 @@ The objective is to create a version to provide a code fixed at a given time to 
 
 First, click on 0 releases  and after 'Create a new release'
 
-![](.gitbook/assets/image%20%2887%29.png)
+![](.gitbook/assets/image%20%2888%29.png)
 
 To create a release you need to give a version tag and a title.
 
-![](.gitbook/assets/image%20%28196%29.png)
+![](.gitbook/assets/image%20%28206%29.png)
 
 **How do version tags work?**
 
@@ -115,7 +115,7 @@ In summary, we have therefore: MAJOR.MINOR.FIX
 
 Finally, the first release in FAIR\_Bioinfo project :
 
-![](.gitbook/assets/image%20%2839%29.png)
+![](.gitbook/assets/image%20%2840%29.png)
 
 ### Obtaining a DOI
 
@@ -127,27 +127,27 @@ DOI or Digital Object Identifiers is a referencing system for quoting a project.
 
 3- Flip the switch to on
 
-![](.gitbook/assets/image%20%28142%29.png)
+![](.gitbook/assets/image%20%28149%29.png)
 
-![](.gitbook/assets/image%20%28158%29.png)
+![](.gitbook/assets/image%20%28165%29.png)
 
 Zenodo then sends you the following message
 
-![](.gitbook/assets/image%20%2834%29.png)
+![](.gitbook/assets/image%20%2835%29.png)
 
 Create a new release on Github 
 
-![](.gitbook/assets/image%20%2881%29.png)
+![](.gitbook/assets/image%20%2882%29.png)
 
 Et voilà ! 
 
 Your project has a DOI. All that remains is to add the badge to the README. Click on the badge in Zenodo then copy the code in the Markdown part. Copy this code into your README file at the top of the file.
 
-![Copy Markdown into your README](.gitbook/assets/image%20%28123%29.png)
+![Copy Markdown into your README](.gitbook/assets/image%20%28128%29.png)
 
 We have the badge in the README
 
-![README](.gitbook/assets/image%20%2837%29.png)
+![README](.gitbook/assets/image%20%2838%29.png)
 
 ### And soon! 
 
@@ -158,7 +158,7 @@ To learn more, here are 2 links:
 * [https://help.github.com/en/articles/about-github-package-registry](https://help.github.com/en/articles/about-github-package-registry)
 * [https://github.com/features/package-registry](https://github.com/features/package-registry)
 
-![Example from Github](.gitbook/assets/image%20%2876%29.png)
+![Example from Github](.gitbook/assets/image%20%2877%29.png)
 
 ## Conclusion
 

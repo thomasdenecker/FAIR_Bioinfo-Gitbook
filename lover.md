@@ -11,7 +11,7 @@ To achieve those objectives:
 
 we will use:
 
-![Logos of R and Shiny application](.gitbook/assets/image%20%28111%29.png)
+![Logos of R and Shiny application](.gitbook/assets/image%20%28116%29.png)
 
 ## The R project
 
@@ -23,27 +23,27 @@ There are many tutorials very well done to take your first steps and learn R. We
 
 The CRAN: [https://cran.r-project.org/](https://cran.r-project.org/)
 
-![](.gitbook/assets/image%20%2858%29.png)
+![](.gitbook/assets/image%20%2859%29.png)
 
 ### R and its _cheat sheets_
 
 Many cheat sheets are available: [https://www.rstudio.com/resources/cheatsheets/](https://www.rstudio.com/resources/cheatsheets/)
 
-![](.gitbook/assets/image%20%28173%29.png)
+![](.gitbook/assets/image%20%28182%29.png)
 
 ### A very large community
 
-![Events and persons to follow](.gitbook/assets/image%20%28144%29.png)
+![Events and persons to follow](.gitbook/assets/image%20%28151%29.png)
 
 ### Rstudio: an IDE at the top!
 
 Rstudio is the Integrated Development Environment \(IDE\) for R. It is free of charge, easy to use, and configurable. The use of an IDE should save a considerable amount of time. [https://www.rstudio.com/](https://www.rstudio.com/)
 
-![The Rstudio logo](.gitbook/assets/image%20%28126%29.png)
+![The Rstudio logo](.gitbook/assets/image%20%28131%29.png)
 
 The Rstudio IDE is composed of 4 parts: for code edition,for iterative cotrole, for workspace, and for plots.
 
-![The Rstudio IDE](.gitbook/assets/image%20%2827%29.png)
+![The Rstudio IDE](.gitbook/assets/image%20%2828%29.png)
 
 #### How to install RStudio?
 
@@ -56,7 +56,7 @@ We propose you 2 installation ways: from the CRAN or with the docker container.
 
 ## Shiny
 
-![The Shiny logo](.gitbook/assets/image%20%2821%29.png)
+![The Shiny logo](.gitbook/assets/image%20%2822%29.png)
 
 Shiny is an R ackage that facilitates the creation of interactive web applications directly from R. It is composed of many functions that translate R
 
@@ -87,11 +87,11 @@ library(shiny)
 
 There are many publications based-on the Shiny package.
 
-![](.gitbook/assets/image%20%28178%29.png)
+![](.gitbook/assets/image%20%28188%29.png)
 
 Here is the number of articles citing Shiny in Pubmed. It is a great success because the Shiny package was delivered first in 2013!
 
-![&quot;Shiny app&quot; search in Pubmed \(years: x-axis, number of articles: y-axis\)](.gitbook/assets/image%20%2818%29.png)
+![&quot;Shiny app&quot; search in Pubmed \(years: x-axis, number of articles: y-axis\)](.gitbook/assets/image%20%2819%29.png)
 
 Is Shiny a new language to learn? NO \(if you can speak R\)
 
@@ -101,13 +101,13 @@ And knowledge of HTML, CSS and JS? Not essential but useful for fine design and 
 
 Here is the architecture of a web application. It is composed of two sides, the User Interface \(UI\) and the Server side. Input and Output pass between the two.
 
-![architecture of an application](.gitbook/assets/image%20%2849%29.png)
+![architecture of an application](.gitbook/assets/image%20%2850%29.png)
 
 ### Example: creating a small application
 
 There is a documented example in the Bioinfo-fr blog.
 
-![](.gitbook/assets/image%20%28113%29.png)
+![](.gitbook/assets/image%20%28118%29.png)
 
 The article \(in french\) is here: [https://bioinfo-fr.net/rendre-ses-projets-r-plus-accessibles-grace-a-shiny](https://bioinfo-fr.net/rendre-ses-projets-r-plus-accessibles-grace-a-shiny) and the code is on GitHub: [https://github.com/bioinfo-fr/bioinfo-fr\_Shiny](https://github.com/bioinfo-fr/bioinfo-fr_Shiny)
 
@@ -120,7 +120,7 @@ For the example, we will use the "Iris data", that are classical data for many R
 * Dataset: IRIS \(measurements on flowers\)
 * Source: [https://archive.ics.uci.edu/ml/datasets/iris](https://archive.ics.uci.edu/ml/datasets/iris)
 
-![An Iris flower](.gitbook/assets/image%20%28129%29.png)
+![An Iris flower](.gitbook/assets/image%20%28134%29.png)
 
 The table is composed of 5 columns:
 
@@ -169,7 +169,7 @@ Save the code: `app.R` \(and of course version with git!\)
 
 In RStudio, click on the "Run App" button:
 
-![](.gitbook/assets/image%20%28130%29.png)
+![](.gitbook/assets/image%20%28135%29.png)
 
 In a terminal \(in the folder with the app.R file\): 
 
@@ -181,7 +181,7 @@ The file name is not specified in the command line because app.R is the default 
 
 The result is:
 
-![](.gitbook/assets/image%20%2889%29.png)
+![](.gitbook/assets/image%20%2891%29.png)
 
 It looks a simple visualization but when compared with the corresponding html code:
 
@@ -242,7 +242,7 @@ It looks a simple visualization but when compared with the corresponding html co
 
 The different areas of the dashboard are:
 
-![](.gitbook/assets/image%20%28120%29.png)
+![](.gitbook/assets/image%20%28125%29.png)
 
 ### Configure our application
 
@@ -322,7 +322,7 @@ Why do we need to create a file reader ? Because we have to configure the read \
 
 **Result**
 
-![](.gitbook/assets/image%20%28200%29.png)
+![](.gitbook/assets/image%20%28210%29.png)
 
 #### Parameters setting area 
 
@@ -379,17 +379,17 @@ tabItem(tabName = "readData",
 
 **Result**
 
-![](.gitbook/assets/image%20%28169%29.png)
+![](.gitbook/assets/image%20%28178%29.png)
 
 #### Preview area
 
 For the preview area we have to work on both sides, the user interface and the server. Reminder of the communication between UI and server sides:
 
-![](.gitbook/assets/image%20%2841%29.png)
+![](.gitbook/assets/image%20%2842%29.png)
 
 Applying of the schema to the preview feature give:
 
-![](.gitbook/assets/image%20%28151%29.png)
+![](.gitbook/assets/image%20%28158%29.png)
 
 To implement this preview feature, we have to compose 4 operations, two on UI side \("File" and "Table display"\) and two on the server side \("File reading" and "Creation of a table display"\).
 
@@ -424,21 +424,21 @@ tabItems(
 
 **Server side**
 
-![](.gitbook/assets/image%20%2812%29.png)
+![](.gitbook/assets/image%20%2813%29.png)
 
 **Result**
 
-![](.gitbook/assets/image%20%2831%29.png)
+![](.gitbook/assets/image%20%2832%29.png)
 
 #### Organizing the elements
 
 All the elements we create appear one below the other. We would like to place two of them, "Parameters" and "File preview" next to each other.  The area is pre-cut into 12 columns so to place two elements side by side, simply add the specification of the column number where they are to be positioned. It is done inside a `fluiRow` table invocation:
 
-![](.gitbook/assets/image%20%2825%29.png)
+![](.gitbook/assets/image%20%2826%29.png)
 
 **Result**
 
-![](.gitbook/assets/image%20%2853%29.png)
+![](.gitbook/assets/image%20%2854%29.png)
 
 #### Reading with the settings
 
@@ -489,7 +489,7 @@ observeEvent(input$actBtnVisualisation, {
 
 There will be two results when the user click on the button: i\) the confirmation message:
 
-![](.gitbook/assets/image%20%2826%29.png)
+![](.gitbook/assets/image%20%2827%29.png)
 
 and ii\) the change of the page after the reading for the "visualization" page.
 
@@ -515,7 +515,7 @@ output$dataTable = DT::renderDataTable(data$table)
 
 **Result**
 
-![](.gitbook/assets/image%20%2883%29.png)
+![](.gitbook/assets/image%20%2884%29.png)
 
 ### Adding conditional actions
 
@@ -558,7 +558,7 @@ output$dataTable = DT::renderDataTable({
 
 **Result**
 
-![](.gitbook/assets/image%20%28136%29.png)
+![](.gitbook/assets/image%20%28142%29.png)
 
 ### Adding graphs
 
@@ -582,11 +582,11 @@ tabItem(tabName = "visualization",
 
 **Server side**
 
-![](.gitbook/assets/image%20%2884%29.png)
+![](.gitbook/assets/image%20%2885%29.png)
 
 **Result**
 
-![](.gitbook/assets/image%20%28131%29.png)
+![](.gitbook/assets/image%20%28137%29.png)
 
 ### Interacte with graphic
 
@@ -608,7 +608,7 @@ output$plotAvecR <- renderPlot({
 
 We use a test \(`if (!is.null(data$table))`\) to avoid the display if we have not read a table.
 
-![](.gitbook/assets/image%20%28191%29.png)
+![](.gitbook/assets/image%20%28201%29.png)
 
 #### Graphical changes
 
@@ -639,7 +639,7 @@ fluidRow(
 
 Which input for which parameter? We can choose input thank to the gallery of examples associated with their code. Look here: [https://shiny.rstudio.com/gallery/widget-gallery.html](https://shiny.rstudio.com/gallery/widget-gallery.html)
 
-![The widget gallery of examples](.gitbook/assets/image%20%28175%29.png)
+![The widget gallery of examples](.gitbook/assets/image%20%28185%29.png)
 
 We choose:
 
@@ -650,11 +650,11 @@ We choose:
 
 Corresponding code for the **UI side**:
 
-![](.gitbook/assets/image%20%28177%29.png)
+![](.gitbook/assets/image%20%28187%29.png)
 
 **Result**
 
-![](.gitbook/assets/image%20%28101%29.png)
+![](.gitbook/assets/image%20%28105%29.png)
 
 and code for the **server side**:
 
@@ -677,7 +677,7 @@ Even more reproductibility? It would be necessary to add the numbers of the pack
 
 You may look at the complete code in the file `FAIR_app.sh` of the github repository \([https://github.com/thomasdenecker/FAIR\_Bioinfo](https://github.com/thomasdenecker/FAIR_Bioinfo)\). The code is complete but you now have all the keys to look into it.
 
-![](.gitbook/assets/image%20%2867%29.png)
+![](.gitbook/assets/image%20%2868%29.png)
 
 ## The R power
 
@@ -728,11 +728,11 @@ dataExtract = data %>%
 
 Using [plotly](https://www.rdocumentation.org/packages/plotly):
 
-![](.gitbook/assets/image%20%2842%29.png)
+![](.gitbook/assets/image%20%2843%29.png)
 
 Using [googleVis](https://developers.google.com/chart/interactive/docs/gallery):
 
-![](.gitbook/assets/image%20%2814%29.png)
+![](.gitbook/assets/image%20%2815%29.png)
 
 ### Reading of special files
 
@@ -748,17 +748,17 @@ The focus is on the disciplinary field of bioinformatics. Here are the R librari
 
 Access to the proportionality of each intersection classes with [UpSetR](https://www.rdocumentation.org/packages/UpSetR):
 
-![](.gitbook/assets/image%20%2875%29.png)
+![](.gitbook/assets/image%20%2876%29.png)
 
 Actualize old matrix visualization with [corrplot package](https://cran.r-project.org/web/packages/corrplot/vignettes/corrplot-intro.html):
 
-![](.gitbook/assets/image%20%2868%29.png)
+![](.gitbook/assets/image%20%2869%29.png)
 
 ## Conclusion
 
 To present the principles of the FAIR\_Bioinfo shiny application, we realized with a small application based on other data, the `iris` data often associated with R packages but these data do not always reflect the data to be processed. 
 
-![@rstatsmemes](.gitbook/assets/image%20%2815%29.png)
+![@rstatsmemes](.gitbook/assets/image%20%2816%29.png)
 
 Thanks to R's strong collaborative development, we are convinced that R is a very rich language. We have presented you with so few packages!
 

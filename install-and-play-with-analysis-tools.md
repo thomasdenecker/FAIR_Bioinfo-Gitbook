@@ -25,7 +25,7 @@ GTCGACGAATATAAAGTTATTGGGAGAGACGCTGAAGGTCGCGTTGGAGATGGACTCAATTGCGCTTCGCGTTCGCCTCG
 
 and the output will be the html report. Below is an example of a quality histogram, with the basic positions of the reads in abscissa and the sequencing quality values ordered. For each position, a moustache box shows the quality values found in the read file, the highest are the best. 
 
-![Example of a quality histogram provided by FastQC](.gitbook/assets/image%20%28189%29.png)
+![Example of a quality histogram provided by FastQC](.gitbook/assets/image%20%28199%29.png)
 
 We can divide in 3 parts the quality histogram below: from base 1 to 20, the quality is good; from base 21 to 26, the quality is medium; and for the last bases, the quality is poor.
 
@@ -48,7 +48,7 @@ As we have 6 inputs files, we need to run 6 times this FastQC step.
 
 We want to associate each read on the genome place it come. We use a mapper tools, bowtie2. Bowtie2 take as input the reads file, the reference genome sequence and give a file containing the maping result, one line for each mapping hit: 
 
-![](.gitbook/assets/image%20%2852%29.png)
+![](.gitbook/assets/image%20%2853%29.png)
 
 The result file is in format `.sam` \(**S**equence **A**lignment **M**ap\) which is a text format with speficied columns. The complete specification of the sam format could be see here \([https://samtools.github.io/hts-specs/SAMv1.pdf](https://samtools.github.io/hts-specs/SAMv1.pdf)\) and here are some columns with our file:
 
@@ -71,7 +71,7 @@ The CIGAR value is a string that synthetically indicates the alignment of the re
 
 Here are 2 CIGAR examples associated to their meanings in terms of alignment of a query sequence onto a reference sequence:
 
-![CIGAR examples](.gitbook/assets/image%20%2864%29.png)
+![CIGAR examples](.gitbook/assets/image%20%2865%29.png)
 
 ### Manage the alignment files with samtools
 
@@ -82,11 +82,11 @@ At this stage, we have sam files. These are large files and it is possible and d
 
 A bam file is no longer readable by humans but is lighter than its corresponding sam file:
 
-![Reduction of a sam file by converting it into bam format](.gitbook/assets/image%20%28103%29.png)
+![Reduction of a sam file by converting it into bam format](.gitbook/assets/image%20%28108%29.png)
 
 By adding an indexing step of the bam file, it allows us to operate the computer with tasks for which it has been optimized. This indexing step provides a `.bai` file that constitutes the index. 
 
-![](.gitbook/assets/image%20%28174%29.png)
+![](.gitbook/assets/image%20%28183%29.png)
 
 Reducing sam files and using samtools with bam and bai files will gain us times due to the lightness of the resulting files.
 
@@ -96,19 +96,19 @@ One time more: as we have 6 inputs files, we need to run 6 times this samtools s
 
 Many tools offer to visualize the reads mapped to the genome. We will use IGV \(**I**ntegrative **G**enome **V**iewer\). This tool need 3 kinds of input: the sequence of the reference genome \(file in`fasta` format\), the corresponding annotations associated to this sequence \(file in `gff` format\), and one or more reads mapping files \(file in `bam` format\).
 
-![](.gitbook/assets/image%20%28132%29.png)
+![](.gitbook/assets/image%20%28138%29.png)
 
 #### Genomic Feature annotation File
 
 A gff formated file is composed of 9 columns, indicating the genomic positions at the beginning and end of genomic elements of interest.
 
-![Meanings of the gff file columns ](.gitbook/assets/image%20%2854%29.png)
+![Meanings of the gff file columns ](.gitbook/assets/image%20%2855%29.png)
 
-![Content of the gff file for the O.tauri species](.gitbook/assets/image%20%2820%29.png)
+![Content of the gff file for the O.tauri species](.gitbook/assets/image%20%2821%29.png)
 
 The next screenshot, is an IGV visualisation centered on one gene, the gene ostta18g0198 \(gene number 198 on the 18th chromosome of the _Ostreococcus tauri_ genome\). Two mapping files were imported, one for each condition \(uper: standard condition, lower: iron depletion condition\).
 
-![IGV visualisation of the ostta18g0198 gene.](.gitbook/assets/image%20%28182%29.png)
+![IGV visualisation of the ostta18g0198 gene.](.gitbook/assets/image%20%28192%29.png)
 
 Th_e ostta18g0198_ gene is differentialy expressed between the 2 conditions: it is more expressed in case of iron depletion.
 
@@ -116,7 +116,7 @@ Th_e ostta18g0198_ gene is differentialy expressed between the 2 conditions: it 
 
 The transcriptional activity of genes is assumed to be proportional to the number of mapped reads observed. So the next step of the analysis is to count the number of reads per gene. We use HTseq-count tool for that. With a genome annotation file \(gff format\) and the reads alignment file \(bam format\), HTseq-count tool provides a table with 2 columns, gene name and number of reads mapped on it.
 
-![](.gitbook/assets/image%20%28122%29.png)
+![](.gitbook/assets/image%20%28127%29.png)
 
 Once more: as we have 6 inputs files, we need to run 6 times this HTseq-count step.
 
@@ -124,11 +124,11 @@ Once more: as we have 6 inputs files, we need to run 6 times this HTseq-count st
 
 Now we have the data to reply the scientific question: which genes are expressed differently between the 2 conditions of the study? The differential analysis of gene expression is based on a statistical model. We chose DESeq2, a tool designed for this task. Working with all the count tables, DESeq2 will provide a logFC and an adjusted P-value for each gene that allow us to select genes to focus on.
 
-![DESeq2 inputs](.gitbook/assets/image%20%28116%29.png)
+![DESeq2 inputs](.gitbook/assets/image%20%28121%29.png)
 
 DESeq2 provides numerous graphs that illustrate each statistical decision it makes based on default threshold values. It is a good practice to carefully look at the results to eventually change one or more default parameters and re-run this step.
 
-![Example of 2 DESeq2 result graphs: Mean-Average plot \(left\) and Volcano plot \(right\)](.gitbook/assets/image%20%28104%29.png)
+![Example of 2 DESeq2 result graphs: Mean-Average plot \(left\) and Volcano plot \(right\)](.gitbook/assets/image%20%28109%29.png)
 
 The more there are replicas in each condition, the more the statistical test is powerful.
 
@@ -136,7 +136,7 @@ This step, as it associates the 6 count tables is done one time.
 
 ### Workflow review
 
-![](.gitbook/assets/image%20%2892%29.png)
+![](.gitbook/assets/image%20%2895%29.png)
 
 ## Installing FastQC by hand 
 
@@ -144,7 +144,7 @@ Now we want to realise our workflow. The first thing is to install all the tools
 
 We download it by a browser from this link: [https://www.bioinformatics.babraham.ac.uk/projects/download.html](https://www.bioinformatics.babraham.ac.uk/projects/download.html), where we choose the FastQC\_V0.11.8 link according to our operating system.
 
-![The FastQC web page](.gitbook/assets/image%20%28134%29.png)
+![The FastQC web page](.gitbook/assets/image%20%28140%29.png)
 
 The file we downloaded is compressed, so we have to decompress it and we can read the documentation. To install the tool, we open a terminal and move \(with the `cd` command\) to the folder where FastQC was decompressed. If we launch it \(`./fastqc`\), we probably obtain:
 
@@ -169,7 +169,7 @@ Yes it is! We will use the conda solution.
 
 ## Presentation of conda 
 
-![](.gitbook/assets/image%20%28184%29.png)
+![](.gitbook/assets/image%20%28194%29.png)
 
 Conda is an open source package and environment manager. Conda may:
 
@@ -181,7 +181,7 @@ It is multi-platform: _ie_. for Windows, macOS and Linux and above all it has no
 
 Conda works with channels through which packages are accessed. For bioinformatics tools, there is a dedicated channel called "Bioconda".
 
-![](.gitbook/assets/image%20%28183%29.png)
+![](.gitbook/assets/image%20%28193%29.png)
 
 Bioconda is a software distribution channel, usable by the conda package manager and offering many software used in bioinformatics.
 

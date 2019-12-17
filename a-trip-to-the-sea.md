@@ -19,7 +19,7 @@ In this chapter, we will set the operating system.
 
 There is at least two solutions that allow us to have several operating systems on the same physical machine: Virtualization or Containerization.
 
-![Differencies between Vitualization \(left\) and Containerization \(rigth\)](.gitbook/assets/image%20%28193%29.png)
+![Differencies between Vitualization \(left\) and Containerization \(rigth\)](.gitbook/assets/image%20%28203%29.png)
 
 This schema show us that Containerization is lighter than Virtualization. As Containerization is lighter, it is also faster to install and therefore easier to share and more portable. 
 
@@ -29,7 +29,7 @@ We will used the Containerization with the **docker** solution.
 
 [**Docker**](https://docs.docker.com/) is a tool for create and/or use containers.
 
-![](.gitbook/assets/image%20%2856%29.png)
+![](.gitbook/assets/image%20%2857%29.png)
 
 To use Docker, our system must be up to date, we must have "administrator" rights and for this reason, docker is not often recommended by academic institution that prefer the [**singularity**](https://sylabs.io/singularity/) solution \(but at the writing date, the "singularity" solution has just undergone a major update that is not compatible with the reproducibility criteria we are looking for\).
 
@@ -47,7 +47,7 @@ It is very simple for macOS and Windows \(in graphical interface\), and a little
 
 Windows and MacOS installations require the [creation of an account](https://hub.docker.com/signup) on the container sharing site, DockerHub. Creating an account will be necessary anyway to share your own containers.
 
-![DockerHub account creation page](.gitbook/assets/image%20%2874%29.png)
+![DockerHub account creation page](.gitbook/assets/image%20%2875%29.png)
 
 Test the installation with your first usage of a container, the "hello-world" container : `sudo docker run hello-world`
 
@@ -86,17 +86,17 @@ Now, docker must still be active \(it is called a "daemon"\). This can be verifi
 
 An image is a set of functions that allow an application to run. It is fixed \(not modifiable\). It can be stored online and shared \(DockerHub\)
 
-![Docker images are like machines of an computer room](.gitbook/assets/image%20%2871%29.png)
+![Docker images are like machines of an computer room](.gitbook/assets/image%20%2872%29.png)
 
 #### Container
 
 A container is an image that is active. It is modifiable. 
 
-![A docker container is like a computer on in an computer room.](.gitbook/assets/image%20%2891%29.png)
+![A docker container is like a computer on in an computer room.](.gitbook/assets/image%20%2894%29.png)
 
 An image can be used as a model for several containers that will be independent of each other:
 
-![](.gitbook/assets/image%20%2850%29.png)
+![](.gitbook/assets/image%20%2851%29.png)
 
 The independence is interesting in the context of database queries for example.
 
@@ -374,7 +374,7 @@ Don't panic, there is documentation!
 
 Here an example with the [**Rocker** project](https://www.rocker-project.org/):
 
-![](.gitbook/assets/image%20%28119%29.png)
+![](.gitbook/assets/image%20%28124%29.png)
 
 Another useful docker image is the **galaxy** project : just with a docker run and a little of time, you may have a complete galaxy server on your laptop [bgruening/docker-galaxy-stable](https://github.com/bgruening/docker-galaxy-stable).
 
@@ -432,7 +432,7 @@ The schema hereafter shows how using the `-v` option give access to the local re
 
 It is  volumes association is a bidirectional sharing:
 
-![](.gitbook/assets/image%20%28172%29.png)
+![](.gitbook/assets/image%20%28181%29.png)
 
 The modifications done in the local side are visible into the docker container and the reverse is true, the modifications done inside the docker container are visible in the local repository.
 
@@ -476,7 +476,52 @@ Perform the analysis, **retrieve the results** and turn off your VM!
 
 We will next present you the access through the `ssh` \(**S**ecure **SH**ell\) protocol, a common way to access on remonte and shared resources like clouds.
 
-The first thing to do is to follow the documentation of your resource center to get access. Probably you will have to ask for an account. One you have an account, you may configure it. One of the main configuration is the add of you public ssh-key \(see in the "Toolbox" chapter how to manage a ssh-key\).
+The first thing to do is to follow the documentation of your resource center to get access. Probably you will have to ask for an account. One you have an account, you may configure it. One of the main configuration is the add of your public ssh-key. The next section explains what is a public ssh-key.
+
+### A couple of ssh-keys
+
+ A couple of ssh-keys is an encryption solution that avoid us to reminder multiple passwords because two machines will communicate and exchange their access keys together without us but the first time for a configuration step.
+
+This secure protocol may be necessary when you request an account from a shared resource such as a cloud or a computer cluster. 
+
+If you don't have yet an ssh-key couple \(on Linux it is stored into the `.ssh/`repository and the two files are nammed `id_rsa.pub` for the public key and `id_rsa` for the private key\). You may create one couple with the `ssh-keygen` software:
+
+```text
+$ ssh-keygen -t rsa -C "FAIR_BIOINFO"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/tdenecker/.ssh/id_rsa):
+/home/tdenecker/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/tdenecker/.ssh/id_rsa.
+Your public key has been saved in /home/tdenecker/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:5QwtwncvoLl1j0qnEahb5lT3YyqqPOQzsz+kZPBf4Dc FAIR_BIOINFO
+The key's randomart image is:
++---[RSA 2048]----+
+|                 |
+|     .   .       |
+|      o = +      |
+|  .   .* O .     |
+|   o .+.S * .    |
+|    =.o+E+ =     |
+|   =.+=oo.o =    |
+|   .B*o..= o .   |
+|    =O+oo..      |
++----[SHA256]-----+id_rsa.pub
+```
+
+Your **private** key should **never be shared** \(but kept in the `.ssh` repository\), only the public key`id_ras.pub`can be shared. Here is an example of a public key, note that it is a one-line file:
+
+```text
+$ cat .ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC/GcB30kTCSEJkbdo7SpgW2qavEGmVJYy0JzdMmf8EOWz8++ShTb0S4uuuVMsr4uJmztKkTzcEbV6sNWL9dlPi1RtU6dtZ2OTcx1IrDCSY82MgrzPU3hbOlZT6FPcgUvk5M0oQJgAR12ngQRn6yOm6jYXXczPncrIYwcVkRuyepv+Bdbu8//OIAeyY1d469JDQeXEBLRoNp6UxaOfI10VHHeWQ7o3Rd09k0BM+GT7Hn21NGeA0BWYPmMD6YxORii1T5lzhwGnGqxY2CXFL87Y0Cg6V0lsyF/Ze60iBQc6ckNZJMBa8+YtCQquWIh4Fugi0oRvb444v1Usn6HIHsFDb FAIR_BIOINFO
+```
+
+During the steps of configuring your account on a cloud/cluster, you may need to copy and paste your public key. Check the one-line format of your copy.
+
+The 2 keys will now be able to exchange between the machines and this secure protocol replaces a log requiring a password.
 
 ### Access to the virtual machine
 
@@ -597,7 +642,7 @@ Docker will probably be the solution in the future!
 
 ### Where are we in terms of reproducibility?
 
-![Practical Computational Reproducibility in the Life Sciences - Bj&#xF6;rn Gr&#xFC;ning et al \(2018\)](.gitbook/assets/image%20%28115%29.png)
+![Practical Computational Reproducibility in the Life Sciences - Bj&#xF6;rn Gr&#xFC;ning et al \(2018\)](.gitbook/assets/image%20%28120%29.png)
 
 From the schema of [Björn Grüning _et al._](https://doi.org/10.1016/j.cels.2018.03.014), we have reach the last stack of reproducibility, with the same reproducibility tools than they: git, conda, docker, and a VM.
 

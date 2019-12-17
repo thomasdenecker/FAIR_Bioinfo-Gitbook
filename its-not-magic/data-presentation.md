@@ -8,9 +8,11 @@ The organism studied is _Ostreococcus tauri_  and the available data are data fr
 
 ## Experimental design
 
-3 biological replicas were made for each condition. 16 different experimental conditions were performed. In this project, we will only use the data of the difference +Fe / -Fe at 9 hours in light condition 1
+3 biological replicas were made for each condition. 16 different experimental conditions were performed. 
 
-![Experimental design](.gitbook/assets/image%20%28128%29.png)
+![Experimental design](../.gitbook/assets/image%20%28133%29.png)
+
+In this project, we will only use the data of the difference +Fe / -Fe at 9 hours in light condition 1.
 
 ## Data recovery
 
@@ -19,9 +21,9 @@ The organism studied is _Ostreococcus tauri_  and the available data are data fr
 * SRA \(Sequence Read Archive\) : [here](https://www.ncbi.nlm.nih.gov/sra?linkname=bioproject_sra_all&from_uid=304086)
 * EMBL-EBI : [here](https://www.ebi.ac.uk/ena/data/view/PRJNA304086)
 
-![Screenshot from SRA](.gitbook/assets/image%20%2817%29.png)
+![Screenshot from SRA](../.gitbook/assets/image%20%2818%29.png)
 
-![Screenshot from EMBL-EBI](.gitbook/assets/image%20%2847%29.png)
+![Screenshot from EMBL-EBI](../.gitbook/assets/image%20%2848%29.png)
 
 ### Data type
 

@@ -31,7 +31,7 @@ In short, everything must be described and justified so that another researcher 
 
 There is a real problem of reproducibility in Biology. **70 %** analyses in Experimental Biology are not reproducible \([Monya Baker, Nature, 2016](https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970)\). 
 
-![Monya Baker, Nature, 2016](.gitbook/assets/image%20%28156%29.png)
+![Monya Baker, Nature, 2016](.gitbook/assets/image%20%28163%29.png)
 
 ### In computer science
 
@@ -39,7 +39,7 @@ The same problem is described in computer science \([Collberg et al, University 
 
 
 
-![Collberg et al, University of Arizona TR 14-04, 2015](.gitbook/assets/image%20%28137%29.png)
+![Collberg et al, University of Arizona TR 14-04, 2015](.gitbook/assets/image%20%28143%29.png)
 
 ### In Bioinformatics
 
@@ -59,7 +59,7 @@ Bioinformatics is also affected... Problems still too frequent such as for exa
 
 Fortunately, there are solutions and FAIR\_Bioinfo is here to offer you one! To try to solve its reproducibility problems, we will use development solutions.
 
-![Some tools discussed in the FAIR\_Bioinfo](.gitbook/assets/image%20%2835%29.png)
+![Some tools discussed in the FAIR\_Bioinfo](.gitbook/assets/image%20%2836%29.png)
 
 
 

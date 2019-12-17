@@ -37,17 +37,17 @@ The language to speak with our computer is called bash. We will often change the
 
 Terminal is already installed in Ubuntu. To open terminal in Ubuntu, open the applications by clicking at the bottom left. 
 
-![](.gitbook/assets/image%20%28114%29.png)
+![](../.gitbook/assets/image%20%28119%29.png)
 
 After, write `terminal` in the search bar and click on Terminal.
 
-![](.gitbook/assets/image%20%2880%29.png)
+![](../.gitbook/assets/image%20%2881%29.png)
 
 ### **In Mac OsX**
 
 Terminal is already installed. To open terminal in Ubuntu, open Finder and click on Application.
 
-![](.gitbook/assets/image%20%28188%29.png)
+![](../.gitbook/assets/image%20%28198%29.png)
 
 ### In Windows
 
@@ -55,11 +55,11 @@ Terminal is already installed. To open terminal in Ubuntu, open Finder and click
 
 Since the last updates, it is possible to install a Ubuntu terminal on Windows. You have to go to the windows store and then search and download: ubuntu 18.04 LTS.
 
-![](.gitbook/assets/image%20%2890%29.png)
+![](../.gitbook/assets/image%20%2893%29.png)
 
 Once the installation is complete, all that remains is to launch it
 
-![](.gitbook/assets/image%20%2879%29.png)
+![](../.gitbook/assets/image%20%2880%29.png)
 
 #### Configuration at first launch
 
@@ -86,7 +86,7 @@ tdenecker@DESKTOP-B8ON598:~$
 
 Using cortana, you can type ubuntu to find the terminal easily :
 
-![](.gitbook/assets/image%20%2877%29.png)
+![](../.gitbook/assets/image%20%2878%29.png)
 
 Et voilà! You are equipped for the rest of the training!
 

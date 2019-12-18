@@ -1,4 +1,4 @@
-# Install and play with analysis tools
+# Play with analysis tools
 
 In this chapter we will rapidly present the workflow tools \(FastQC, Bowtie2, Samtools, HTseq-Count\) and see how to install by hand the first one, FastQC. We then present conda, a tool that help install.
 

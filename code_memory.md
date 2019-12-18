@@ -27,7 +27,7 @@ Using a method to record successive \(or even parallel\) versions becomes vital 
 
 ### What? When? Why? Git & Github!
 
-We present a version manager: git. And his sidekick who allows the saving and sharing of codes through the net: github. 
+We present a version manager: **git**. And his sidekick who allows the saving and sharing of codes through the net: **github**. 
 
 The usefulness of these 2 solutions in science is well established. 
 
@@ -49,7 +49,7 @@ For Windows users, you can also use this tool if you do not want to use the Ubun
 
 ### Initialise Git
 
-Git installation require three minimal steps: create a specific folder, define your identity, and initialise.
+The first git usage require 3 minimal steps: create a specific folder, define your identity, and initialise.
 
 ```bash
 # Create a new folder
@@ -114,7 +114,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 Yes it does! And Git also explains that we need do track the changes.
 
-Finally, git allows you to take pictures at a given time. Let's take the example of the family photo at the Sunday meal to illustrate the rest.
+Finally, git allows you to take a picture at a given time. Let's take the example of the family photo at the Sunday meal to illustrate the rest.
 
 #### Inform git to track files? `git add`
 
@@ -188,7 +188,7 @@ index cd1ad34..32a6825 100644
 
 #### The changes cycle
 
-Save the changes with a cycle: i\) `git add` file ii\) `git commit -m` comment iii\) `git status`
+Save the changes with a cycle: i\) `git add myfile`  ii\) `git commit -m mycomment` iii\) `git status`
 
 ```bash
 $ git add test.txt
@@ -240,7 +240,7 @@ Next, we create a new branch named "modification":
 $ git branch modification
 ```
 
-We have not yet move to these new branch.
+But we have not yet move to these new branch.
 
 #### How to move toward a branch? `git checkout <branchName>`
 
@@ -318,7 +318,7 @@ As everything is going well, now we want to transfer the change to the main bran
 
 #### How to switch changes from one branch to the main branch?  `git merge <branchName>`
 
-We join the master branch \(checkout\), and merge the "modification" branch. If we no longer need the branch, we can delete it \(branch with option `-d`\):
+We join the master branch \(`checkout`\), and `merge` the "modification" branch. If we no longer need the branch, we can delete it \(`branch` with option `-d`\):
 
 ```text
 $ git checkout master
@@ -361,10 +361,10 @@ We want to use a remote repository to upload our code files. A remote repository
 
 Like all traditional computer resources, a few steps before using GitHub for your project are required: 
 
-* first if you don't a GitHub account yet, initialize one \(the private gihtub account is unlimited for academics\). Follow the GitHub instruction to initialize your GitHub account here: [https://github.com/](https://github.com/)
+* first if you don't have a GitHub account yet, initialize one \(the private gihtub account is unlimited for academics\). Follow the GitHub instruction to initialize your GitHub account here: [https://github.com/](https://github.com/)
 * and next create a new repository **on the GitHub space**
 
-For the rest of the presentation, we will use the GitHub account named "thomasdenecker" and the "DemoGit" directory. To access this remote directory, GitHub offers a URL that is composed as follows:
+For the rest of the presentation, we will use the GitHub account named "thomasdenecker" and the "DemoGit" directory. To access this remote directory, GitHub offers an URL that is composed as follows:
 
 ```text
 https://github.com/thomasdenecker/DemoGit.git
@@ -372,7 +372,7 @@ https://github.com/thomasdenecker/DemoGit.git
 
 ### Associate the local and the remote repositories
 
-We have to associate our local git repository to our new remote repository on GitHub. From our local git repository, we change the "origin" point \(remote\) and next we drop all files from the local repository to the remote repository \(push\).
+We have to associate our local git repository to our new remote repository on GitHub. From our local git repository, we change the "origin" point \(`remote`\) and next we drop all files from the local repository to the remote repository \(`push`\).
 
 ```text
 $ git remote add origin https://github.com/thomasdenecker/DemoGit.git
@@ -394,7 +394,7 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 ### The changes cycle with a remote repository
 
-With a remote repository, the cycle to manage changes becomes: "i\) `git add file`, ii\) `git commit -m comment`, and iii\) **`git push origin master`**". Here, an example of cycle of change with creating a new file \(with the bash`cat` command\):
+With a remote repository, the cycle to manage changes becomes: "i\) `git add myfile`, ii\) `git commit -m mycomment`, and iii\) **`git push origin master`**". Here, an example of cycle of change with creating a new file \(with the bash`cat` command\):
 
 ```text
 $ cat test.txt
@@ -429,7 +429,7 @@ GitHub offers many functionalities to work with collaborators. We select a few o
 
 ![](.gitbook/assets/image%20%2890%29.png)
 
-#### **H**ow to catch the changes made by collaborators? =&gt; git pull origin master 
+#### **H**ow to catch the changes made by collaborators? `git pull origin master`
 
 **\(**eg. your collaborator has created a README.md file that you want to retrieve\)
 
@@ -452,7 +452,7 @@ Fast-forward
 
 #### How to describe a problem? or to propose a code change?
 
-Sometimes when using the code of a GitHub project, you detect a problem. The thing to do is to inform the developer team. Use the GiHub tab "Issue" to describe the problem you are face on. Here is a screen capture of this "Issue" tab:
+Sometimes when using the code of a GitHub project, you detect a problem. The thing to do is to inform the developers team. Use the GiHub tab "Issue" to describe the problem you are face on. Here is a screen capture of this "Issue" tab:
 
 ![](.gitbook/assets/image%20%28126%29.png)
 

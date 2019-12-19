@@ -37,6 +37,8 @@ _"When it comes to reproducible science, Git is code for success ... and the key
 
 All we have to do is try them on!
 
+In this session, we will present you the Git tool and the Github place. Next, we will apply these two to our own project by creating a github repository and saving the code we built at the previous session.
+
 ## The Git tool
 
 ### Where find git?
@@ -49,7 +51,7 @@ For Windows users, you can also use this tool if you do not want to use the Ubun
 
 ### Initialise Git
 
-The first git usage require 3 minimal steps: create a specific folder, define your identity, and initialise.
+The first Git usage require 3 minimal steps: create a specific folder, define your identity, and initialise.
 
 ```bash
 # Create a new folder
@@ -114,7 +116,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 Yes it does! And Git also explains that we need do track the changes.
 
-Finally, git allows you to take a picture at a given time. Let's take the example of the family photo at the Sunday meal to illustrate the rest.
+Finally, Git allows you to take a picture at a given time. Let's take the example of the family photo at the Sunday meal to illustrate the rest.
 
 #### Inform git to track files? `git add`
 
@@ -188,7 +190,7 @@ index cd1ad34..32a6825 100644
 
 #### The changes cycle
 
-Save the changes with a cycle: i\) `git add myfile`  ii\) `git commit -m mycomment` iii\) `git status`
+Save the changes with a 3-steps cycle: i\) `git add myfile`  ii\) `git commit -m mycomment` iii\) `git status`
 
 ```bash
 $ git add test.txt
@@ -221,7 +223,7 @@ Date:   Tue Nov 13 14:49:29 2018 +0100
 
 ### Branches
 
-Sometimes we want to test a small \(or large\) idea without changing the current project. We simply make a "copy" \(branch\) of the initial project \(master\) where we can make the modifications. Thus, this has no impact on the main project.
+Sometimes we want to test a small \(or large\) idea without changing the current project. We simply make a "copy" \(`branch`\) of the initial project where we can make the modifications. Thus, this has no impact on the main project.
 
 #### How to check the actual working branch? `git branch`
 
@@ -230,7 +232,7 @@ git branch
 * master
 ```
 
-The star indicates the current branch. Here it is the main branch of a project, its default name is "master".
+The star indicates the current branch. Here it is the main branch of a project, its default name is `master`.
 
 #### How to create a new branch? `git branch <newBranchName>`
 
@@ -255,7 +257,7 @@ $ git branch
 * modification
 ```
 
-We change something in the "modification" branche \(eg. we add a file named `test.txt`\) :
+We change something in the "modification" branch \(eg. we add a file named `test.txt`\) :
 
 ```text
 $ cat test.txt

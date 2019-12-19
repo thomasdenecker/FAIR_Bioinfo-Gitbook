@@ -212,6 +212,8 @@ nothing to commit, working tree clean
 
 #### How to list the commits history? `git log`
 
+\(type "q" to quit\)
+
 ```bash
 $ git log
 commit bbea074d0b2f6335f99e2d54c6a7092adb08f337 (HEAD -> master)
@@ -263,7 +265,7 @@ $ git branch
 * modification
 ```
 
-We change something in the "modification" branch \(eg. we add a file named `test.txt`\) :
+We change something in the "modification" branch \(_eg._ we add "Modification in branch"  at the end of the `test.txt`file\):
 
 ```text
 $ cat test.txt
@@ -293,7 +295,7 @@ Text modifications
 +
 ```
 
-We keep the changes \(add, commit\) and check the history \(log\):
+We keep the changes \(add, commit\) and check the history \(log ; type "q" to quit\):
 
 ```text
 $ git add test.txt
@@ -332,7 +334,7 @@ We join the master branch \(`checkout`\), and `merge` the "modification" branch.
 $ git checkout master
 Switched to branch 'master'
 
-$ git merge modifications
+$ git merge modification
 Updating bbea074..c334c8b
 Fast-forward
 test.txt | 3 +++

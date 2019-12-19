@@ -1,4 +1,4 @@
-# Bioinformatic analysis reproducibility as aim
+# Gain in bioinformatic analysis reproducibility as a goal
 
 A recent study published in Nature has shown that nearly 70% of experiments in Biology are not reproducible. It is therefore essential to put in place good practices to ensure data integrity and reproducibility of analytical results. Concerning data, the FAIR-data principles are increasingly being used. These same principles can be used in the analysis department to guarantee identical results from the same data set and over time ... The objective of this document is to propose a range of functionalities to make a complete bioinformatics analysis reproducible. 
 

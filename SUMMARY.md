@@ -1,9 +1,6 @@
 # Table of contents
 
-* [Bioinformatic analysis reproducibility as aim](README.md)
-* [The context of Reproducibility](some-definitions.md)
-* [FAIR principles](fair-principles.md)
-* [On the training program](on-the-training-program.md)
+* [Gain in bioinformatic analysis reproducibility as a goal](README.md)
 * [It's not magic](its-not-magic.md)
 * [The code memory](code_memory.md)
 * [Play with analysis tools](install-and-play-with-analysis-tools.md)

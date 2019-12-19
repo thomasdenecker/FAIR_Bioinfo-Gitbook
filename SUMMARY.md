@@ -9,6 +9,5 @@
 * [LoveR](lover.md)
 * [Valuation and sharing with notebooks](notebooks.md)
 * [Expose your project](expose-your-project.md)
-* [Perspectives and limits](discussion.md)
-* [Conclusion](conclusion.md)
+* [Conclusions, perspectives and limitations](discussion.md)
 

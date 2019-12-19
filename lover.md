@@ -671,7 +671,7 @@ plot(data$table$Petal.Length[input$dataTable_rows_all],
 
 Et voilà!
 
-Even more reproductibility? It would be necessary to add the numbers of the packages used.
+Even more reproducibility? It would be necessary to add the numbers of the packages used.
 
 ### Example of the FAIR\_Bioinfo application
 

@@ -1,6 +1,6 @@
 # I've got the power !
 
-Point on our reproductibility and speed:
+Point on our reproducibility and speed:
 
 * [x] automatic scripting
 * [x] use of a cloud with configurable power

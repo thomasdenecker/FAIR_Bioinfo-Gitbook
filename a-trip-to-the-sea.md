@@ -1,6 +1,6 @@
 # A trip to the sea
 
-## Point on our reproductibility status
+## Point on our reproducibility status
 
 Up to now, we have increase the status of the our analysis considering this reproducibility items:
 
@@ -9,7 +9,7 @@ Up to now, we have increase the status of the our analysis considering this repr
 * [x] Installation: Installation script, conda
 * [x] Analysis: Automatic analysis script
 
-But, what about the reproductibility of the **operating system**?
+But, what about the reproducibility of the **operating system**?
 
 > **Dependability Benchmarking for Computer Systems** De K. Kanoun, L. Spainhower
 

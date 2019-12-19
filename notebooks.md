@@ -318,7 +318,7 @@ You can copy markdown link and paste this link in your README. Thus, you have a 
 
 ![](.gitbook/assets/image%20%2832%29.png)
 
-### Reproductibility?
+### Reproducibility?
 
 Binder works with Docker. It automatically builds a Docker image if it detects a Dockerfile in the repository. Be careful, the launch can be a little long depending on the size of the image to be created. the following Dockerfile allows you to launch a Jupyter R notebook on Binder : 
 

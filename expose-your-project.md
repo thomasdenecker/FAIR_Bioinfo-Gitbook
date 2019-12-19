@@ -1,6 +1,6 @@
 # Expose your project
 
-In this last session,, we will explain how to  : **expose your project**
+In this last session, we will explain how to **expose your project**
 
 * A showcase on the web: Github pages
 * Add a license

@@ -298,8 +298,8 @@ We keep the changes \(add, commit\) and check the history \(log\):
 ```text
 $ git add test.txt
 
-$ git commit -m "Changement in branch"
-[modification c334c8b] Changement dans la branche
+$ git commit -m "Change in branch"
+[modification c334c8b] Change in branch
 	1 file changed, 3 insertions(+)
 
 $ git log
@@ -307,7 +307,7 @@ commit c334c8b34368e9be690b9884d9ba18e8c64407c1 (HEAD -> modification)
 Author: thomasdenecker thomas.denecker@gmail.com
 Date:   Tue Nov 13 16:01:08 2018 +0100
 
-    Changement in branch
+    Change in branch
 
 commit bbea074d0b2f6335f99e2d54c6a7092adb08f337 (master)
 Author: thomasdenecker thomas.denecker@gmail.com
@@ -406,17 +406,17 @@ With a remote repository, the cycle to manage changes becomes: "i\) `git add myf
 
 ```text
 $ cat test.txt
-Mon premier test sur Git
+My first file on git
 
-Modification du texte.
+Text modifications
 
-Modification dans la branche.
+Modification in branch
 
-Changements pour Github
+Changes for Github
 
 $ git add test.txt
 
-$ git commit -m "Changements pour Github"
+$ git commit -m "Changes for Github"
 
 $ git push origin master
 Counting objects: 3, done.

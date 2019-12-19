@@ -27,15 +27,15 @@ How to increase our computing power?
 
 ### Zoom on CPU
 
-![50 years of CPU evolution: 1 core - 1971, 10 cores in 2019 \(MIPS: Million Instructions Per Second\)](.gitbook/assets/image%20%28212%29.png)
+![50 years of CPU evolution: 1 core - 1971, 10 cores in 2019 \(MIPS: Million Instructions Per Second\)](.gitbook/assets/image%20%28216%29.png)
 
 The CPU \(Central Processing Unit\) also nammed processor is the component that executes instructions. A processor is composed of one or more cores: 1 core runs 1 instruction, n cores run n instructions in parallel. 
 
-![A quadricore motherborad](.gitbook/assets/image%20%28129%29.png)
+![A quadricore motherborad](.gitbook/assets/image%20%28132%29.png)
 
 In our case, we have many instructions, we can use many cores!
 
-![Comparison of the linear execution of a workflow that can be parallelized on programs 2 and 3.](.gitbook/assets/image%20%28205%29.png)
+![Comparison of the linear execution of a workflow that can be parallelized on programs 2 and 3.](.gitbook/assets/image%20%28209%29.png)
 
 ### How to parallelize?
 
@@ -65,19 +65,19 @@ Definition of a rule:
 * output files
 * code to switch from input files to output files
 
-![A Snakemake rule](.gitbook/assets/image%20%28181%29.png)
+![A Snakemake rule](.gitbook/assets/image%20%28184%29.png)
 
 Snakemake must know the future so there is an order to present the rules in the snakemake file: the first rule specify the files we want at the end \(target/target\) and next, we write the rules to achieve this.
 
 The Snakemake will search for its execution order of rule based on the input and output files of each rule.
 
-![Snakemake execution order](.gitbook/assets/image%20%28113%29.png)
+![Snakemake execution order](.gitbook/assets/image%20%28115%29.png)
 
 ### Comparison of the workflow and the rules flux
 
 An example of rule can be a step of our analysis workflow.  Here is an extract of our analysis workflow:
 
-![Extract of our analysis workflow](.gitbook/assets/image%20%2845%29.png)
+![Extract of our analysis workflow](.gitbook/assets/image%20%2846%29.png)
 
 If we want to represent all the instructions for our 6 inputs to be treated we obtain this picture:
 
@@ -85,7 +85,7 @@ If we want to represent all the instructions for our 6 inputs to be treated we o
 
 Snakemake provides an equivalent view but automatically created from the rule file:
 
-![Data flow provided by Snakemake](.gitbook/assets/image%20%28146%29.png)
+![Data flow provided by Snakemake](.gitbook/assets/image%20%28149%29.png)
 
 The Snakemake commad to obtain this view is:
 
@@ -386,7 +386,7 @@ scp ubuntu@134.212.213.90:/mnt/FAIR_Bioinfo/Project/countTable.txt countTable.tx
 
 Filezilla is an interface to retrieve files from a server.
 
-![](.gitbook/assets/image%20%2879%29.png)
+![](.gitbook/assets/image%20%2881%29.png)
 
 Here is the two-step progession:
 
@@ -396,7 +396,7 @@ and add your **private** key file \(the file we created to connect to the cloud\
 
 2. Connect with Filezilla:
 
-![Interface for Filezilla connexion](.gitbook/assets/image%20%2887%29.png)
+![Interface for Filezilla connexion](.gitbook/assets/image%20%2889%29.png)
 
 Fill the boxes with: **Hôte** : 134.212.213.90 \(following the ssh connexion\), **Identifiant** : ubuntu, **Mot de passe** : \(nothing, the reconnaissance will be done thank to the ssh-keys couple\), **Port** : 22, and click on the button "**Connexion rapide**".
 
@@ -444,7 +444,7 @@ As for using a cloud, you need an account on a cluster resource. Once you have y
 
 Singularity ****which is also an image-based container system, is used to avoid the need of root rights and will allow you to set the environment. It can exploit docker images.
 
-![](.gitbook/assets/image%20%28144%29.png)
+![](.gitbook/assets/image%20%28147%29.png)
 
 #### File to launch on a cluster
 
@@ -452,7 +452,7 @@ On a cluster, jobs are launched on a batch mode, _ie_. they are placed in a queu
 
 We present you how to write the file to launch jobs on a cluster for two kinds of scheduler, slurm \(Simple Linux Utility for Resource Management\) and PBS \(Portable Bash System\). If the scheduler of your cluster resource is not one of these two, you have to adapt the functions to your scheduler. Their syntax are a little different but schedulers share the same philosophy. 
 
-![Logo of the slurm scheduler](.gitbook/assets/image%20%28151%29.png)
+![Logo of the slurm scheduler](.gitbook/assets/image%20%28154%29.png)
 
 The roles of a scheduler concern:
 
@@ -535,7 +535,7 @@ In this Chapter, we gain in reproducibility and speed. We realize the:
 
 Parallelization associated to the use of a cluster are two solutions that decrease the analysis time and may be seen as:
 
-![](.gitbook/assets/image%20%2839%29.png)
+![](.gitbook/assets/image%20%2840%29.png)
 
 We are confident that: **FAIR raw data** associated to **"FAIR\_bioinfo" scripts/protocols** give **FAIR processed data.**
 

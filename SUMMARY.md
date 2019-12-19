@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [Bioinformatic analysis reproducibility as aim](README.md)
 * [The context of Reproducibility](some-definitions.md)
 * [FAIR principles](fair-principles.md)
 * [On the training program](on-the-training-program.md)

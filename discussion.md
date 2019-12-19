@@ -217,7 +217,7 @@ You can find an example of this [here](https://github.com/thomasdenecker/bPeaks-
 
 In Python, it is possible to check the respect of the writing rules \(pep8,...\) An example is available [here](https://github.com/Candihub/pixel).
 
-![](.gitbook/assets/image%20%2860%29.png)
+![](.gitbook/assets/image%20%2862%29.png)
 
 #### Connect to Github
 
@@ -228,13 +228,13 @@ You can find documentation for
 
 An example from bPeaks-application :
 
-![](.gitbook/assets/image%20%2867%29.png)
+![](.gitbook/assets/image%20%2869%29.png)
 
 Objective ? Get the Holy Grail!
 
-![](.gitbook/assets/image%20%2866%29.png)
+![](.gitbook/assets/image%20%2868%29.png)
 
-![](.gitbook/assets/image%20%2899%29.png)
+![](.gitbook/assets/image%20%28101%29.png)
 
 **Open-ended question** : We are more reproducible on the code but are the tests reproducible?
 

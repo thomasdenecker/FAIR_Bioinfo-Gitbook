@@ -12,7 +12,7 @@ description: >-
 
 Many of us think far too early that the current version of our report is the final version. If this statement is true for the current version, it quickly becomes obsolete with time with each change made. This becomes a problem when we can no longer identify the latest version  \(see an example with the [comic strip "FINAL.doc"](http://phdcomics.com/comics/archive.php?comicid=1531)\). 
 
-![](.gitbook/assets/image%20%28122%29.png)
+![](.gitbook/assets/image%20%28124%29.png)
 
 The same applies to computer codes \(script files\). And sorting files by creation date or size does not help to identify the latest version, or more accurately, the one that works. Example:
 
@@ -29,7 +29,7 @@ R_script_final_final.R       R_script_really_final.R
 
 Using a method to record successive \(or even parallel\) versions becomes vital for reproducible research. This is one of the 10 basic rules according to [Sandve _et al._](https://doi.org/10.1371/journal.pcbi.1003285): "Rule 4: Version Control All Custom Scripts".
 
-![Version control all custom scripts](.gitbook/assets/image%20%2844%29.png)
+![Version control all custom scripts](.gitbook/assets/image%20%2845%29.png)
 
 ### What? When? Why? Git & Github!
 
@@ -363,7 +363,7 @@ We now how to manage and control our different versions of code files. One next 
 
 We want to use a remote repository to upload our code files. A remote repository has the advantage of allowing access to our files from any workstation that has net access. This is for you but also for all the people you want to involve. For this objective, we choose "GitHub", a Microsoft web-based hosting service for version control using Git. 
 
-![The GitHub logotype](.gitbook/assets/image%20%28158%29.png)
+![The GitHub logotype](.gitbook/assets/image%20%28161%29.png)
 
 ### GitHub initialization : account & repository
 
@@ -435,7 +435,7 @@ GitHub offers many functionalities to work with collaborators. We select a few o
 
 #### How to add a collaborator? =&gt; in the "Settings" tab
 
-![](.gitbook/assets/image%20%2890%29.png)
+![](.gitbook/assets/image%20%2892%29.png)
 
 #### **H**ow to catch the changes made by collaborators? `git pull origin master`
 
@@ -462,11 +462,11 @@ Fast-forward
 
 Sometimes when using the code of a GitHub project, you detect a problem. The thing to do is to inform the developers team. Use the GiHub tab "Issue" to describe the problem you are face on. Here is a screen capture of this "Issue" tab:
 
-![](.gitbook/assets/image%20%28126%29.png)
+![](.gitbook/assets/image%20%28128%29.png)
 
 If you have explored the code and you have a proposition of change, you may use the "Pull requests" tab to inform the team of your suggestion:
 
-![](.gitbook/assets/image%20%28174%29.png)
+![](.gitbook/assets/image%20%28177%29.png)
 
 Perhaps the suggestion will not be retained by the team of developers because of a different vision but, with such fair-play actions, the codes should become better and better. And this is good!
 
@@ -474,19 +474,19 @@ Perhaps the suggestion will not be retained by the team of developers because of
 
 Github may help you to manage your project, defining tasks and temporal plan,  follow it progress, etc. These helps stand in the "Projects" tab:
 
-![](.gitbook/assets/image%20%28167%29.png)
+![](.gitbook/assets/image%20%28170%29.png)
 
 The result of your planning is organized in a three part-desk: tasks done, tasks in progress, and tasks to do:
 
-![](.gitbook/assets/image%20%28177%29.png)
+![](.gitbook/assets/image%20%28180%29.png)
 
 The tab "Wiki" offers you to create a wiki associated to your project:
 
-![](.gitbook/assets/image%20%28175%29.png)
+![](.gitbook/assets/image%20%28178%29.png)
 
 And after a click on "Create the first page" and few changes you will have a wiki page:
 
-![](.gitbook/assets/image%20%28139%29.png)
+![](.gitbook/assets/image%20%28142%29.png)
 
 #### How to retrieve another project?  `git clone`
 
@@ -519,7 +519,7 @@ Files with which git can calculate the difference between two versions. Most oft
 
 ### Not so simple...
 
-![https://xkcd.com/1597/](.gitbook/assets/image%20%28168%29.png)
+![https://xkcd.com/1597/](.gitbook/assets/image%20%28171%29.png)
 
 Talking "git" is not so simple but once conquered, it is impossible to do without it!
 
@@ -531,7 +531,7 @@ In the previous session "It's not magic", we created a script, _i.e_. code. A be
 
 On our Github account, create a new repository:
 
-![Screen capture : create a new repository on the GitHub page](.gitbook/assets/image%20%28150%29.png)
+![Screen capture : create a new repository on the GitHub page](.gitbook/assets/image%20%28153%29.png)
 
 ### Connect git & github
 

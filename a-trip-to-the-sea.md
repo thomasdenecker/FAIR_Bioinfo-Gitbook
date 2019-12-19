@@ -19,7 +19,7 @@ In this chapter, we will set the operating system.
 
 There is at least two solutions that allow us to have several operating systems on the same physical machine: Virtualization or Containerization.
 
-![Differencies between Vitualization \(left\) and Containerization \(rigth\)](.gitbook/assets/image%20%28204%29.png)
+![Differencies between Vitualization \(left\) and Containerization \(rigth\)](.gitbook/assets/image%20%28208%29.png)
 
 This schema show us that Containerization is lighter than Virtualization. As Containerization is lighter, it is also faster to install and therefore easier to share and more portable. 
 
@@ -29,7 +29,7 @@ We will used the Containerization with the **docker** solution.
 
 [**Docker**](https://docs.docker.com/) is a tool for create and/or use containers.
 
-![](.gitbook/assets/image%20%2857%29.png)
+![](.gitbook/assets/image%20%2859%29.png)
 
 To use Docker, our system must be up to date, we must have "administrator" rights and for this reason, docker is not often recommended by academic institution that prefer the [**singularity**](https://sylabs.io/singularity/) solution \(but at the writing date, the "singularity" solution has just undergone a major update that is not compatible with the reproducibility criteria we are looking for\).
 
@@ -47,7 +47,7 @@ It is very simple for macOS and Windows \(in graphical interface\), and a little
 
 Windows and MacOS installations require the [creation of an account](https://hub.docker.com/signup) on the container sharing site, DockerHub. Creating an account will be necessary anyway to share your own containers.
 
-![DockerHub account creation page](.gitbook/assets/image%20%2875%29.png)
+![DockerHub account creation page](.gitbook/assets/image%20%2877%29.png)
 
 Test the installation with your first usage of a container, the "hello-world" container : `sudo docker run hello-world`
 
@@ -86,17 +86,17 @@ Now, docker must still be active \(it is called a "daemon"\). This can be verifi
 
 An image is a set of functions that allow an application to run. It is fixed \(not modifiable\). It can be stored online and shared \(DockerHub\)
 
-![Docker images are like machines of an computer room](.gitbook/assets/image%20%2872%29.png)
+![Docker images are like machines of an computer room](.gitbook/assets/image%20%2874%29.png)
 
 #### Container
 
 A container is an image that is active. It is modifiable. 
 
-![A docker container is like a computer on in an computer room.](.gitbook/assets/image%20%2894%29.png)
+![A docker container is like a computer on in an computer room.](.gitbook/assets/image%20%2896%29.png)
 
 An image can be used as a model for several containers that will be independent of each other:
 
-![](.gitbook/assets/image%20%2851%29.png)
+![](.gitbook/assets/image%20%2853%29.png)
 
 The independence is interesting in the context of database queries for example.
 
@@ -374,7 +374,7 @@ Don't panic, there is documentation!
 
 Here an example with the [**Rocker** project](https://www.rocker-project.org/):
 
-![](.gitbook/assets/image%20%28124%29.png)
+![](.gitbook/assets/image%20%28126%29.png)
 
 Another useful docker image is the **galaxy** project : just with a docker run and a little of time, you may have a complete galaxy server on your laptop [bgruening/docker-galaxy-stable](https://github.com/bgruening/docker-galaxy-stable).
 
@@ -432,7 +432,7 @@ The schema hereafter shows how using the `-v` option give access to the local re
 
 It is  volumes association is a bidirectional sharing:
 
-![](.gitbook/assets/image%20%28182%29.png)
+![](.gitbook/assets/image%20%28185%29.png)
 
 The modifications done in the local side are visible into the docker container and the reverse is true, the modifications done inside the docker container are visible in the local repository.
 
@@ -642,7 +642,7 @@ Docker will probably be the solution in the future!
 
 ### Where are we in terms of reproducibility?
 
-![Practical Computational Reproducibility in the Life Sciences - Bj&#xF6;rn Gr&#xFC;ning et al \(2018\)](.gitbook/assets/image%20%28120%29.png)
+![Practical Computational Reproducibility in the Life Sciences - Bj&#xF6;rn Gr&#xFC;ning et al \(2018\)](.gitbook/assets/image%20%28122%29.png)
 
 From the schema of [Björn Grüning _et al._](https://doi.org/10.1016/j.cels.2018.03.014), we have reach the last stack of reproducibility, with the same reproducibility tools than they: git, conda, docker, and a VM.
 

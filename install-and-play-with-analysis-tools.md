@@ -25,7 +25,7 @@ GTCGACGAATATAAAGTTATTGGGAGAGACGCTGAAGGTCGCGTTGGAGATGGACTCAATTGCGCTTCGCGTTCGCCTCG
 
 and the output will be the html report. Below is an example of a quality histogram, with the basic positions of the reads in abscissa and the sequencing quality values ordered. For each position, a moustache box shows the quality values found in the read file, the highest are the best. 
 
-![Example of a quality histogram provided by FastQC](.gitbook/assets/image%20%28199%29.png)
+![Example of a quality histogram provided by FastQC](.gitbook/assets/image%20%28200%29.png)
 
 We can divide in 3 parts the quality histogram below: from base 1 to 20, the quality is good; from base 21 to 26, the quality is medium; and for the last bases, the quality is poor.
 
@@ -86,7 +86,7 @@ A bam file is no longer readable by humans but is lighter than its corresponding
 
 By adding an indexing step of the bam file, it allows us to operate the computer with tasks for which it has been optimized. This indexing step provides a `.bai` file that constitutes the index. 
 
-![](.gitbook/assets/image%20%28183%29.png)
+![](.gitbook/assets/image%20%28184%29.png)
 
 Reducing sam files and using samtools with bam and bai files will gain us times due to the lightness of the resulting files.
 
@@ -108,7 +108,7 @@ A gff formated file is composed of 9 columns, indicating the genomic positions a
 
 The next screenshot, is an IGV visualisation centered on one gene, the gene ostta18g0198 \(gene number 198 on the 18th chromosome of the _Ostreococcus tauri_ genome\). Two mapping files were imported, one for each condition \(uper: standard condition, lower: iron depletion condition\).
 
-![IGV visualisation of the ostta18g0198 gene.](.gitbook/assets/image%20%28192%29.png)
+![IGV visualisation of the ostta18g0198 gene.](.gitbook/assets/image%20%28193%29.png)
 
 Th_e ostta18g0198_ gene is differentialy expressed between the 2 conditions: it is more expressed in case of iron depletion.
 
@@ -169,7 +169,7 @@ Yes it is! We will use the conda solution.
 
 ## Presentation of conda 
 
-![](.gitbook/assets/image%20%28194%29.png)
+![](.gitbook/assets/image%20%28195%29.png)
 
 Conda is an open source package and environment manager. Conda may:
 
@@ -181,7 +181,7 @@ It is multi-platform: _ie_. for Windows, macOS and Linux and above all it has no
 
 Conda works with channels through which packages are accessed. For bioinformatics tools, there is a dedicated channel called "Bioconda".
 
-![](.gitbook/assets/image%20%28193%29.png)
+![](.gitbook/assets/image%20%28194%29.png)
 
 Bioconda is a software distribution channel, usable by the conda package manager and offering many software used in bioinformatics.
 

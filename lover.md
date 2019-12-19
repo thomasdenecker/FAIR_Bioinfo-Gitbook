@@ -29,11 +29,11 @@ The CRAN: [https://cran.r-project.org/](https://cran.r-project.org/)
 
 Many cheat sheets are available: [https://www.rstudio.com/resources/cheatsheets/](https://www.rstudio.com/resources/cheatsheets/)
 
-![](.gitbook/assets/image%20%28182%29.png)
+![](.gitbook/assets/image%20%28183%29.png)
 
 ### A very large community
 
-![Events and persons to follow](.gitbook/assets/image%20%28151%29.png)
+![Events and persons to follow](.gitbook/assets/image%20%28152%29.png)
 
 ### Rstudio: an IDE at the top!
 
@@ -87,7 +87,7 @@ library(shiny)
 
 There are many publications based-on the Shiny package.
 
-![](.gitbook/assets/image%20%28188%29.png)
+![](.gitbook/assets/image%20%28189%29.png)
 
 Here is the number of articles citing Shiny in Pubmed. It is a great success because the Shiny package was delivered first in 2013!
 
@@ -322,7 +322,7 @@ Why do we need to create a file reader ? Because we have to configure the read \
 
 **Result**
 
-![](.gitbook/assets/image%20%28210%29.png)
+![](.gitbook/assets/image%20%28211%29.png)
 
 #### Parameters setting area 
 
@@ -379,7 +379,7 @@ tabItem(tabName = "readData",
 
 **Result**
 
-![](.gitbook/assets/image%20%28178%29.png)
+![](.gitbook/assets/image%20%28179%29.png)
 
 #### Preview area
 
@@ -389,7 +389,7 @@ For the preview area we have to work on both sides, the user interface and the s
 
 Applying of the schema to the preview feature give:
 
-![](.gitbook/assets/image%20%28158%29.png)
+![](.gitbook/assets/image%20%28159%29.png)
 
 To implement this preview feature, we have to compose 4 operations, two on UI side \("File" and "Table display"\) and two on the server side \("File reading" and "Creation of a table display"\).
 
@@ -608,7 +608,7 @@ output$plotAvecR <- renderPlot({
 
 We use a test \(`if (!is.null(data$table))`\) to avoid the display if we have not read a table.
 
-![](.gitbook/assets/image%20%28201%29.png)
+![](.gitbook/assets/image%20%28202%29.png)
 
 #### Graphical changes
 
@@ -639,7 +639,7 @@ fluidRow(
 
 Which input for which parameter? We can choose input thank to the gallery of examples associated with their code. Look here: [https://shiny.rstudio.com/gallery/widget-gallery.html](https://shiny.rstudio.com/gallery/widget-gallery.html)
 
-![The widget gallery of examples](.gitbook/assets/image%20%28185%29.png)
+![The widget gallery of examples](.gitbook/assets/image%20%28186%29.png)
 
 We choose:
 
@@ -650,7 +650,7 @@ We choose:
 
 Corresponding code for the **UI side**:
 
-![](.gitbook/assets/image%20%28187%29.png)
+![](.gitbook/assets/image%20%28188%29.png)
 
 **Result**
 

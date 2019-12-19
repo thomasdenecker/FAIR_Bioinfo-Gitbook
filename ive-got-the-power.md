@@ -27,7 +27,7 @@ How to increase our computing power?
 
 ### Zoom on CPU
 
-![50 years of CPU evolution: 1 core - 1971, 10 cores in 2019 \(MIPS: Million Instructions Per Second\)](.gitbook/assets/image%20%28211%29.png)
+![50 years of CPU evolution: 1 core - 1971, 10 cores in 2019 \(MIPS: Million Instructions Per Second\)](.gitbook/assets/image%20%28212%29.png)
 
 The CPU \(Central Processing Unit\) also nammed processor is the component that executes instructions. A processor is composed of one or more cores: 1 core runs 1 instruction, n cores run n instructions in parallel. 
 
@@ -35,7 +35,7 @@ The CPU \(Central Processing Unit\) also nammed processor is the component that 
 
 In our case, we have many instructions, we can use many cores!
 
-![Comparison of the linear execution of a workflow that can be parallelized on programs 2 and 3.](.gitbook/assets/image%20%28204%29.png)
+![Comparison of the linear execution of a workflow that can be parallelized on programs 2 and 3.](.gitbook/assets/image%20%28205%29.png)
 
 ### How to parallelize?
 
@@ -65,7 +65,7 @@ Definition of a rule:
 * output files
 * code to switch from input files to output files
 
-![A Snakemake rule](.gitbook/assets/image%20%28180%29.png)
+![A Snakemake rule](.gitbook/assets/image%20%28181%29.png)
 
 Snakemake must know the future so there is an order to present the rules in the snakemake file: the first rule specify the files we want at the end \(target/target\) and next, we write the rules to achieve this.
 
@@ -452,7 +452,7 @@ On a cluster, jobs are launched on a batch mode, _ie_. they are placed in a queu
 
 We present you how to write the file to launch jobs on a cluster for two kinds of scheduler, slurm \(Simple Linux Utility for Resource Management\) and PBS \(Portable Bash System\). If the scheduler of your cluster resource is not one of these two, you have to adapt the functions to your scheduler. Their syntax are a little different but schedulers share the same philosophy. 
 
-![Logo of the slurm scheduler](.gitbook/assets/image%20%28150%29.png)
+![Logo of the slurm scheduler](.gitbook/assets/image%20%28151%29.png)
 
 The roles of a scheduler concern:
 

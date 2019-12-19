@@ -31,7 +31,7 @@ In short, everything must be described and justified so that another researcher 
 
 There is a real problem of reproducibility in Biology. **70 %** analyses in Experimental Biology are not reproducible \([Monya Baker, Nature, 2016](https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970)\). 
 
-![Monya Baker, Nature, 2016](.gitbook/assets/image%20%28163%29.png)
+![Monya Baker, Nature, 2016](.gitbook/assets/image%20%28164%29.png)
 
 ### In computer science
 

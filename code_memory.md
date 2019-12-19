@@ -1,3 +1,9 @@
+---
+description: >-
+  Presentation of the Git tool and the Github web-based service, application by
+  saving on Github the code created in the previous session.
+---
+
 # The code memory
 
 ## Introduction
@@ -37,7 +43,7 @@ _"When it comes to reproducible science, Git is code for success ... and the key
 
 All we have to do is try them on!
 
-In this session, we will present you the Git tool and the Github place. Next, we will apply these two to our own project by creating a github repository and saving the code we built at the previous session.
+In this session, we will present you the Git tool and the Github web-based service. Next, we will apply these two things to our own project by creating a Github repository and saving the code we built at the previous session.
 
 ## The Git tool
 
@@ -357,7 +363,7 @@ We now how to manage and control our different versions of code files. One next 
 
 We want to use a remote repository to upload our code files. A remote repository has the advantage of allowing access to our files from any workstation that has net access. This is for you but also for all the people you want to involve. For this objective, we choose "GitHub", a Microsoft web-based hosting service for version control using Git. 
 
-![The GitHub logotype](.gitbook/assets/image%20%28157%29.png)
+![The GitHub logotype](.gitbook/assets/image%20%28158%29.png)
 
 ### GitHub initialization : account & repository
 
@@ -460,7 +466,7 @@ Sometimes when using the code of a GitHub project, you detect a problem. The thi
 
 If you have explored the code and you have a proposition of change, you may use the "Pull requests" tab to inform the team of your suggestion:
 
-![](.gitbook/assets/image%20%28173%29.png)
+![](.gitbook/assets/image%20%28174%29.png)
 
 Perhaps the suggestion will not be retained by the team of developers because of a different vision but, with such fair-play actions, the codes should become better and better. And this is good!
 
@@ -468,15 +474,15 @@ Perhaps the suggestion will not be retained by the team of developers because of
 
 Github may help you to manage your project, defining tasks and temporal plan,  follow it progress, etc. These helps stand in the "Projects" tab:
 
-![](.gitbook/assets/image%20%28166%29.png)
+![](.gitbook/assets/image%20%28167%29.png)
 
 The result of your planning is organized in a three part-desk: tasks done, tasks in progress, and tasks to do:
 
-![](.gitbook/assets/image%20%28176%29.png)
+![](.gitbook/assets/image%20%28177%29.png)
 
 The tab "Wiki" offers you to create a wiki associated to your project:
 
-![](.gitbook/assets/image%20%28174%29.png)
+![](.gitbook/assets/image%20%28175%29.png)
 
 And after a click on "Create the first page" and few changes you will have a wiki page:
 
@@ -513,9 +519,117 @@ Files with which git can calculate the difference between two versions. Most oft
 
 ### Not so simple...
 
-![https://xkcd.com/1597/](.gitbook/assets/image%20%28167%29.png)
+![https://xkcd.com/1597/](.gitbook/assets/image%20%28168%29.png)
 
 Talking "git" is not so simple but once conquered, it is impossible to do without it!
+
+## Applying Git/Github to the FAIR\_bioinfo project
+
+In the previous session "It's not magic", we created a script, _i.e_. code. A best practise for repoducibility is to save its different versions into a code version manager. We choose Git & Github and we now follow these steps: i\) create a GiHub repository for this project \("Fair\_project"\), ii\) connect to git & github, iii\) select the files to save and share, iv\) save.
+
+### Create the GitHub repository 
+
+On our Github account, create a new repository:
+
+![Screen capture : create a new repository on the GitHub page](.gitbook/assets/image%20%28150%29.png)
+
+### Connect git & github
+
+Open a terminal and go \(with `cd` bash command\) to the repository `FAIR_project` we created during the previous "It's not magic" session:
+
+```text
+tdenecker@DESKTOP-B8ON598:~$ cd Fair_project/
+tdenecker@DESKTOP-B8ON598:~/Fair_project$
+```
+
+Connect Git & Github with the local repository, following the Github proposition \(in the URL, change the "thomasdenecker" mention by your github login\):
+
+```text
+echo "# Fair_project" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/thomasdenecker/Fair_project.git
+git push -u origin master
+```
+
+### Save & share the script
+
+Checkin the `git status` on the terminal displays a list of files or repositories that we could add to the github depot. Git call them "untracked files":
+
+```text
+tdenecker@DESKTOP-B8ON598:~/Fair_project$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Fair_script.sh
+	      Project/
+	      contitions.txt
+
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+But we do not want the `Project` repository to be stored on github because it contains data that are too heavy and can be private. To prevent its save, we add a `.gitignore` file that will contain all files or repositories we want to exclude from github. Each line of the `.gitignore` file correspond to one file or repository to exclude. With the text editor you prefer \(`nano` in the example\) and place the `Project` repository into a `.gitingnore` file:
+
+```text
+tdenecker@DESKTOP-B8ON598:~/Fair_project$ nano .gitignore
+tdenecker@DESKTOP-B8ON598:~/Fair_project$ cat .gitignore
+Project/
+```
+
+A `git status` check the correctness of exclusions from the `.gitignore` file:
+
+```text
+tdenecker@DESKTOP-B8ON598:~/Fair_project$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        Fair_script.sh
+	      contitions.txt
+
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+The `Project` repository disappeared from the list of possible untracked files while the `.gitignore` file appears. 
+
+### Save on github
+
+We are ready to save on the github repository. We apply the git 3-steps cycle, add, commit, and save: 
+
+```text
+tdenecker@DESKTOP-B8ON598:~/Fair_project$ git add .
+tdenecker@DESKTOP-B8ON598:~/Fair_project$ git commit -m "Init Fair_script.sh - architecture"
+[master 2d2e31b] Init Fair_script.sh - architecture
+ 1 file changed, 11 insertions(+)
+ create mode 100644 Fair_script.sh
+tdenecker@DESKTOP-B8ON598:~/Fair_project$ git push origin master
+Username for 'https://github.com': thomasdenecker
+Password for 'https://thomasdenecker@github.com':
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 392 bytes | 130.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/thomasdenecker/Fair_project.git
+   61310c5..2d2e31b  master -> master
+```
+
+{% hint style="danger" %}
+Here we already had a repository to import to github. But, the best practice is rather to start by creating the git framework before creating the script that structures the project.
+{% endhint %}
+
+## It's up to you
+
+{% hint style="success" %}
+If not done during your reading, repeat the command lines of the last part of this session, "Applying Git/Github to the FAIR\_bioinfo project". For the next session, you should have your `FAIR_script.sh,` `conditions.txt` `README.md`, and `.gitignore` files saved in your Github depot.
+{% endhint %}
 
 ## Resources
 

@@ -19,7 +19,7 @@ In this chapter, we will set the operating system.
 
 There is at least two solutions that allow us to have several operating systems on the same physical machine: Virtualization or Containerization.
 
-![Differencies between Vitualization \(left\) and Containerization \(rigth\)](.gitbook/assets/image%20%28203%29.png)
+![Differencies between Vitualization \(left\) and Containerization \(rigth\)](.gitbook/assets/image%20%28204%29.png)
 
 This schema show us that Containerization is lighter than Virtualization. As Containerization is lighter, it is also faster to install and therefore easier to share and more portable. 
 
@@ -432,7 +432,7 @@ The schema hereafter shows how using the `-v` option give access to the local re
 
 It is  volumes association is a bidirectional sharing:
 
-![](.gitbook/assets/image%20%28181%29.png)
+![](.gitbook/assets/image%20%28182%29.png)
 
 The modifications done in the local side are visible into the docker container and the reverse is true, the modifications done inside the docker container are visible in the local repository.
 

@@ -22,7 +22,7 @@ You can find [here ](https://guides.github.com/features/mastering-markdown/)Gith
 
 Markdown also has his cheat sheet \([here](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)\).
 
-![Markdown cheat sheet ](.gitbook/assets/image%20%28160%29.png)
+![Markdown cheat sheet ](.gitbook/assets/image%20%28161%29.png)
 
 ## Quick review of basic orders
 
@@ -170,7 +170,7 @@ It's a project in full expansion! About 4.5 million notebooks jupiter on Github!
 
 Jupyter is used by the greatest ...
 
-![Screenshot of the home page of the Jupyter project](.gitbook/assets/image%20%28177%29.png)
+![Screenshot of the home page of the Jupyter project](.gitbook/assets/image%20%28178%29.png)
 
 ... and there are many articles about it :
 
@@ -288,7 +288,7 @@ The main commands are:
 * **Execute** : execute code in a cell
 * **Code** : Type of cell \(code or markdown\)
 
-![](.gitbook/assets/image%20%28202%29.png)
+![](.gitbook/assets/image%20%28203%29.png)
 
 **A example before execution** 
 
@@ -296,7 +296,7 @@ The main commands are:
 
 **This example after execution** 
 
-![](.gitbook/assets/image%20%28153%29.png)
+![](.gitbook/assets/image%20%28154%29.png)
 
 ## Binder
 
@@ -312,7 +312,7 @@ You can find an example in Github \([here](https://github.com/thomasdenecker/not
 
 To connect Github and Binder, simply copy the repository address to the [Binder website](https://gke.mybinder.org/). If several notebooks are present in the repository, you can specify the notebook to be generated
 
-![](.gitbook/assets/image%20%28164%29.png)
+![](.gitbook/assets/image%20%28165%29.png)
 
 You can copy markdown link and paste this link in your README. Thus, you have a clickable badge that will automatically launch binder with your notebook.
 
@@ -392,7 +392,7 @@ To start, you must choose your kernel on the following home page:
 
 Then, the notebook is created. The interface is exactly the same and the use is identical.
 
-![A notebook in JupyterLab](.gitbook/assets/image%20%28190%29.png)
+![A notebook in JupyterLab](.gitbook/assets/image%20%28191%29.png)
 
 On the right-hand side you will find a configuration window. It allows you to add a console under your notebook \(to test it during your development\).
 
@@ -402,7 +402,7 @@ On the right-hand side you will find a configuration window. It allows you to ad
 
 Rmarkdown is another solution for creating notebooks. This is R's association with markdown.
 
-![](.gitbook/assets/image%20%28195%29.png)
+![](.gitbook/assets/image%20%28196%29.png)
 
 To create a Rmarkdown notebook, the easiest way is to use Rstudio. You can use the Rstudio that is in our FAIR\_Bionfo docker, a docker that combines Jupyter, Binder and Rstudio.
 
@@ -418,7 +418,7 @@ Click on FIle &gt; New FIle &gt; Rmarkdown or on File icon with a green plus.
 
 Rstudio creates a Rmarkdown file \(.Rmd\) with default content to help you get started with the system.
 
-![](.gitbook/assets/image%20%28205%29.png)
+![](.gitbook/assets/image%20%28206%29.png)
 
 After, you can save this notebook in HTML format \(or PDF,...\).
 
@@ -426,7 +426,7 @@ After, you can save this notebook in HTML format \(or PDF,...\).
 
 The HTML page obtained is as follows 
 
-![](.gitbook/assets/image%20%28171%29.png)
+![](.gitbook/assets/image%20%28172%29.png)
 
 ### Building a notebook with R
 
@@ -665,7 +665,7 @@ params$si
 
 When the report is created, a parameter file is created.
 
-![](.gitbook/assets/image%20%28168%29.png)
+![](.gitbook/assets/image%20%28169%29.png)
 
 By modifying the application a little, you can import this file to update the settings.
 
@@ -714,7 +714,7 @@ if(!is.null(input$ParamsFile$datapath)){
 
 Default parameters are as follows
 
-![](.gitbook/assets/image%20%28169%29.png)
+![](.gitbook/assets/image%20%28170%29.png)
 
 After import example parameter file 
 

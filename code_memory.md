@@ -582,7 +582,7 @@ tdenecker@DESKTOP-B8ON598:~/Fair_project$ cat .gitignore
 Project/
 ```
 
-A `git status` check the correctness of exclusions from the `.gitignore` file:
+With `git status` check the correctness of exclusions from the `.gitignore` file:
 
 ```text
 tdenecker@DESKTOP-B8ON598:~/Fair_project$ git status

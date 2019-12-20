@@ -33,7 +33,7 @@ Using a method to record successive \(or even parallel\) versions becomes vital 
 
 ### What? When? Why? Git & Github!
 
-We present a version manager: **git**. And his sidekick who allows the saving and sharing of codes through the net: **github**. 
+We present a version control tool: **git**. And his sidekick who allows the saving and sharing of codes through the net: **github**. 
 
 The usefulness of these 2 solutions in science is well established. 
 
@@ -527,7 +527,7 @@ Talking "git" is not so simple but once conquered, it is impossible to do withou
 
 ## Applying Git/Github to the FAIR\_bioinfo project
 
-In the previous session "It's not magic", we created a script, _i.e_. code. A best practise for repoducibility is to save its different versions into a code version manager. We choose Git & Github and we now follow these steps: i\) create a GiHub repository for this project \("Fair\_project"\), ii\) connect to git & github, iii\) select the files to save and share, iv\) save.
+In the previous session "It's not magic", we created a script, _i.e_. code. A best practise for repoducibility is to save its different versions into a version control tool. We choose Git & Github and we now follow these steps: i\) create a GiHub repository for this project \("Fair\_project"\), ii\) connect to git & github, iii\) select the files to save and share, iv\) save.
 
 ### Create the GitHub repository 
 

@@ -1,3 +1,9 @@
+---
+description: >-
+  We present several concepts to save time, in particular the parallelization of
+  the commands and the use of a computing cluster.
+---
+
 # I've got the power !
 
 Point on our reproducibility and speed:
@@ -321,13 +327,13 @@ Almost as it was before!
 It is just necessary to specify to the docker that it can take up space in CPU \(here 6\) and memory \(here 24 GB\):
 
 ```text
-sudo docker run --rm -d -p 8888:8888 --cpus="6" -m=24g --name fair_bioinfo -v ${PWD}:/home/rstudio tdenecker/fair_bioinfo
+$ sudo docker run --rm -d -p 8888:8888 --cpus="6" -m=24g --name fair_bioinfo -v ${PWD}:/home/rstudio tdenecker/fair_bioinfo
 ```
 
 Then run our script:
 
 ```text
-sudo docker exec -it fair_bioinfo bash FAIR_script.sh
+$ sudo docker exec -it fair_bioinfo bash FAIR_script.sh
 ```
 
 And wait... 
@@ -374,12 +380,12 @@ We have run the analysis on a virtual machine into the cloud. Now we have to ret
 
 #### In a terminal
 
-We use `scp`, a cp \(copy\) with ssh. The structure of the scp command is `scp acces:localizationOfRemoteFile localizationOnLocalSpace`
+We use `scp`, a "**s**ecure **c**o**p**y" with ssh. The structure of the `scp` command is `scp acces:localizationOfRemoteFile localizationOnLocalSpace`
 
 Concrete example:
 
 ```text
-scp ubuntu@134.212.213.90:/mnt/FAIR_Bioinfo/Project/countTable.txt countTable.txt
+$ scp ubuntu@134.212.213.90:/mnt/FAIR_Bioinfo/Project/countTable.txt countTable.txt
 ```
 
 #### With Filezilla
@@ -464,7 +470,7 @@ The file to write may contains both the details of the processing to carry out \
 
 #### Writing of the slurm file:
 
-1. File type bash, it is the first line of the file: `!/bin/bash`
+1. File type bash, it is the first line of the file: `#!/bin/bash`
 2. Parameters: the parameters for the slurm scheduler start with `#SBATCH`
 
    * redirection file of the standard output renamed with the job ID:  `#SBATCH -o slurm.%N.%N.%j.out`
@@ -478,7 +484,7 @@ The file to write may contains both the details of the processing to carry out \
    3. Launching the docker and `FAIR_script.sh` script
 
    ```text
-   singularity exec -B $PWD:/home/rstudio fair_bioinfo.simg bash ./FAIR_script.sh
+   $ singularity exec -B $PWD:/home/rstudio fair_bioinfo.simg bash ./FAIR_script.sh
    ```
 
 The total slurm file, nammed `FAIR_Bioinfo.slurm`:
@@ -496,7 +502,7 @@ The total slurm file, nammed `FAIR_Bioinfo.slurm`:
 singularity exec -B $PWD:/home/rstudio fair_bioinfo.sif bash ./FAIR_script.sh
 ```
 
-#### The PBS file, FAIR\_Bioinfo.pbs :
+In case of in case the cluster's scheduler is not slurm but PBS, here is how to modify the job launch script, named for example `FAIR_Bioinfo.pbs` :
 
 ```text
 #!/bin/sh

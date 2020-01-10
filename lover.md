@@ -1,3 +1,10 @@
+---
+description: >-
+  The R language, supposedly known, is used in its Rstudio IDE to create a web
+  application with the Rshiny package. Other R packages are presented: table
+  filtering (dyplr), interactive graphics, ...
+---
+
 # LoveR
 
 In this chapter, we carry out the last step of the analysis, the detection of genes with a different expression between the two conditions analyzed. We will offer the user of the application the possibility to visualize the results \(the counting table\) and even to interact dynamically with the results by allowing the user to change the settings of this step \(such as the threshold values chosen for statistical tests or the color of the graphs\). The reproducibility progress will be achieved by saving the settings chosen by the user.

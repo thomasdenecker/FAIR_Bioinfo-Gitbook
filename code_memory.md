@@ -1,7 +1,7 @@
 ---
 description: >-
   Presentation of the Git tool and the Github web-based service, application by
-  saving on Github the code created in the previous session.
+  saving on Github the code of the previous session.
 ---
 
 # The code memory

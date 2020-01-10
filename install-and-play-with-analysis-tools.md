@@ -8,7 +8,7 @@ description: >-
 
 ## Presentation of workflow tools
 
-We already show you a global view of the analysis workflow \(in the session "It's not magic"\). We will present the fonctionality of each of those tools.
+We already show you a global view of the analysis workflow \(in the session "It's not magic"\). We will briefly present the fonctionality of each of those tools.
 
 ### Reads quality control with FastQC
 

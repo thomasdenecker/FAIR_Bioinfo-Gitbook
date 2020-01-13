@@ -6,6 +6,12 @@ description: >-
 
 # Valuation and sharing with notebooks
 
+{% hint style="info" %}
+Information for the trainer: 
+
+We present the Jupyter notebook \(and its association with Github and binder\) because it is a very used notebook, but due to the Rshiny part of the application, our notebook is writen in Rmarkdown. So in case of lack of time, it is possible to focus only on the "Markdown", "Rmarrkdown", and "Rmarkdown and Shiny" parts.
+{% endhint %}
+
 ## What's a notebook?
 
 It is an interactive programming interface that allows you to combine sections in natural language and sections in computer language.

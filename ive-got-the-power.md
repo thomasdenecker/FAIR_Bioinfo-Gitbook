@@ -342,7 +342,7 @@ And wait...
 
 Here we propose you to replace the wget command we used to download the input data files by the aspera command. Aspera is faster than wget but as the recovered file can be corrupted, we have to check it! And since Aspera does not work on all servers, it should be coupled with another method.
 
-We modify the part of data download \(see part "Automation of data downloading: the loop concept", in the Chater "Install and play with analysis tools"\) to use Aspera:
+We modify the part of data download \(see part "Automation of data downloading: the loop concept", in the Chater "Play with analysis tools"\) to use Aspera:
 
 ```text
 for j in $(tail -n +2 ../../conditions.txt)

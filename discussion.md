@@ -130,8 +130,8 @@ The process for isolation by a VM:
 
 The following links give you the procedure to install VirtualBox :
 
-*  [https://fr.wikihow.com/installer-VirtualBox](https://fr.wikihow.com/installer-VirtualBox) \(multi OS\)
-*  [https://doc.ubuntu-fr.org/virtualbox](https://doc.ubuntu-fr.org/virtualbox) \(Ubuntu\)
+*  [https://fr.wikihow.com/installer-VirtualBox](https://fr.wikihow.com/installer-VirtualBox) \(multi OS, in french\)
+*  [https://doc.ubuntu-fr.org/virtualbox](https://doc.ubuntu-fr.org/virtualbox) \(Ubuntu, in french\)
 
 **2- Install Ubuntu in VirtualBox**
 
@@ -163,7 +163,9 @@ Two software programs are mainly used :
 * [Travis Ci](https://travis-ci.org/)
 * [Circle CI](https://circleci.com/)
 
-Concept of tests We will talk about two types of tests:
+#### Concept of tests 
+
+We will talk about two types of tests:
 
 * **Unit test** 
 
@@ -268,7 +270,7 @@ We are based on an existing image and updates accordingly \(lack of version cont
 
 #### Solutions
 
-We can create an image from solutions like GUIX that freezes versions of Ubuntu tools.
+We can create an image from solutions like [GUIX](https://guix.gnu.org/) that freezes versions of Ubuntu tools.
 
 ### Parallelization and multi-threading 
 

@@ -1,3 +1,9 @@
+---
+description: >-
+  We present different notebooks that allow you to share code associated with
+  its explanatory text.
+---
+
 # Valuation and sharing with notebooks
 
 ## What's a notebook?

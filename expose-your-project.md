@@ -1,3 +1,10 @@
+---
+description: >-
+  In this last session, we explain how to add some important points when
+  exposing a project on web: a web showcase, a license, a code release number,
+  and a digital object identifier
+---
+
 # Expose your project
 
 In this last session, we will explain how to **expose your project**

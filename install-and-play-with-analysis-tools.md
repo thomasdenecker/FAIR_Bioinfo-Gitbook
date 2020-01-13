@@ -146,9 +146,9 @@ This step, as it associates the 6 count tables is done one time.
 
 Now we want to realise our workflow. The first thing is to install all the tools it rely on. We begin by the first of them, FastQC.
 
-We download it by a browser from this link: [https://www.bioinformatics.babraham.ac.uk/projects/download.html](https://www.bioinformatics.babraham.ac.uk/projects/download.html), where we choose the FastQC\_V0.11.8 link according to our operating system.
+We download it by a browser from this link: [https://www.bioinformatics.babraham.ac.uk/projects/download.html](https://www.bioinformatics.babraham.ac.uk/projects/download.html), where we choose the FastQC\_V0.11.9 link according to our operating system.
 
-![The FastQC web page](.gitbook/assets/image%20%28143%29.png)
+![The FastQC web page](.gitbook/assets/fair_fastqc_download.png)
 
 The file we downloaded is compressed, so we have to decompress it and we can read the documentation. To install the tool, we open a terminal and move \(with the `cd` command\) to the folder where FastQC was decompressed. If we launch it \(`./fastqc`\), we probably obtain:
 

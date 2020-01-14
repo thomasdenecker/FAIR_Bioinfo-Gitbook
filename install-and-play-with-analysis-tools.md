@@ -50,7 +50,7 @@ As we have 6 inputs files, we need to run 6 times this FastQC step.
 
 ### Reads mapping on the genome with Bowtie2
 
-We want to associate each read on the genome place it come. We use a mapper tools, bowtie2. Bowtie2 take as input the reads file, the reference genome sequence and give a file containing the maping result, one line for each mapping hit: 
+We want to associate each read on the genome place it come. We use a mapper tools, bowtie2. Bowtie2 takes as input the reads file and the reference genome sequence, and it gives a file containing the maping result, one line for each mapping hit: 
 
 ![](.gitbook/assets/image%20%2855%29.png)
 

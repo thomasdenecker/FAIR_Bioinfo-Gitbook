@@ -7,6 +7,16 @@ description: >-
 
 # LoveR
 
+{% hint style="info" %}
+Information for the trainer: 
+
+R language was known by our learners so we haven't add a R language presentation part in this session. Many resources exists to conceive it. See some references at the end of the session.
+
+In order to make the exploration of the statistical analysis part reactive to the interactions with the user, we have chosen to present the R-shiny package as well as the underlying functioning of an associated web application.
+
+In case of lack of time, the opening to other R packages \(chapter _The R power_\) can be avoided.
+{% endhint %}
+
 In this chapter, we carry out the last step of the analysis, the detection of genes with a different expression between the two conditions analyzed. We will offer the user of the application the possibility to visualize the results \(the counting table\) and even to interact dynamically with the results by allowing the user to change the settings of this step \(such as the threshold values chosen for statistical tests or the color of the graphs\). The reproducibility progress will be achieved by saving the settings chosen by the user.
 
 To achieve those objectives:
@@ -774,4 +784,8 @@ Thanks to R's strong collaborative development, we are convinced that R is a ver
 Add a page to the shiny application based on `iris` data to specify the version of the packages used.
 
 Change the dataset and add graphs \(for example, a correlation between 2 replicates?\)
+
+## Resources
+
+[Programming with R](http://swcarpentry.github.io/r-novice-inflammation) or [R for Reproducible Scientific Analysis](http://swcarpentry.github.io/r-novice-gapminder) :  the Software Carpentry course
 

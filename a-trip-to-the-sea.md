@@ -37,7 +37,7 @@ We will used the Containerization with the **docker** solution.
 
 ![](.gitbook/assets/image%20%2859%29.png)
 
-To use Docker, our system must be up to date, we must have "administrator" rights and for this reason, docker is not often recommended by academic institution that prefer the [**singularity**](https://sylabs.io/singularity/) solution \(but at the writing date, the "singularity" solution has just undergone a major update that is not compatible with the reproducibility criteria we are looking for\).
+To use Docker, our system must be up to date, we must have "administrator" rights and for this reason, docker is not often recommended by academic institution that prefer the [**singularity**](https://sylabs.io/singularity/) solution \(but at the writing date, the "singularity" solution has just undergone a major update that is not compatible with the reproducibility criteria we are looking for\). The administrator rights come with the user "root". To run a command as "root" we use the `sudo` command. We will use this `sudo` command just after to test the installation of docker.
 
 Like any computer tool, we describe three steps to use it: first, the installation step, and then, how to create a container and how to use containers already created. Note that it is possible to use docker without having to create your own container \(when other people will have created a container for you\).
 
@@ -480,7 +480,7 @@ When the time is out, there is no more than VM.
 Perform the analysis, **retrieve the results** and turn off your VM!
 {% endhint %}
 
-We will next present you the access through the `ssh` \(**S**ecure **SH**ell\) protocol, a common way to access on remonte and shared resources like clouds.
+We will next present you the access through the `ssh` \(**s**ecure **sh**ell\) protocol, a common way to access on remonte and shared resources like clouds.
 
 The first thing to do is to follow the documentation of your resource center to get access. Probably you will have to ask for an account. One you have an account, you may configure it. One of the main configuration is the add of your public ssh-key. The next section explains what is a public ssh-key.
 
@@ -562,7 +562,7 @@ ubuntu@machine72ac0a94-37a4-441e-99fc-7005ce8c02e3:~$
 
 ### Running the fair\_bioinfo docker on the cloud
 
-We can run the fair\_bionfo docker \(the limitation of docker to have root rights is not valid on a VM because we are the root user of our VM\):
+We can run the fair\_bionfo docker. The limitation of docker to have administrator rights \(user "root"\) is not valid on a VM because we are the "root" user of our VM and so, we can run a command as "root" with the `sudo` command:
 
 ```text
 $sudo docker run --rm -d -p 8888:8888 --name fair_bioinfo -v ${PWD}:/home/rstudio tdenecker/fair_bioinfo

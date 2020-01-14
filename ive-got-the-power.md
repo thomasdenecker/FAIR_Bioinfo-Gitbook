@@ -342,7 +342,7 @@ And wait...
 
 Here we propose you to replace the wget command we used to download the input data files by the aspera command. Aspera is faster than wget but as the recovered file can be corrupted, we have to check it! And since Aspera does not work on all servers, it should be coupled with another method.
 
-We modify the part of data download \(see part "Automation of data downloading: the loop concept", in the Chater "Play with analysis tools"\) to use Aspera:
+We modify the part of data download \(see part "Automation of data downloading: the loop concept", in the Chater "Install and play with analysis tools"\) to use Aspera:
 
 ```text
 for j in $(tail -n +2 ../../conditions.txt)
@@ -475,13 +475,13 @@ The file to write may contains both the details of the processing to carry out \
 
    * redirection file of the standard output renamed with the job ID:  `#SBATCH -o slurm.%N.%N.%j.out`
    *  redirection of the standard error file renamed with the job ID:  `#SBATCH -e slurm.%N.%N.%j.err`
-   *  choice of calculation nodes/queues \(ex. "fast" =&gt; the calculation will be stopped after n hours ; the names and constraints depend on each computer resource\):  `#SBATCH --partition fast`
+   *  choice of calculation nodes/queues \(ex. "fast" =&gt; the calculation will be stopped after n hours ; the names depend on each resource\):  `#SBATCH --partition fast`
    * number of reserved CPUs \(ex. 6 CPUs\): `#SBATCH --cpus-per-task 6`
    * RAM reservation \(ex. 24 Go\): `#SBATCH --mem 24GB`
 
 
 
-   3. Launching the docker and the `FAIR_script.sh` script :
+   3. Launching the docker and `FAIR_script.sh` script
 
    ```text
    $ singularity exec -B $PWD:/home/rstudio fair_bioinfo.simg bash ./FAIR_script.sh
@@ -514,23 +514,21 @@ cd /home/thomas.denecker/FAIR_Bioinfo/
 singularity exec -B /home/thomas.denecker/FAIR_Bioinfo/:/home/rstudio fair_bioinfo.simg bash ./FAIR_script.sh
 ```
 
-#### Steps to launch the analysis workflow on a cluster:
+#### Steps to launch the analysis workflow on a cluster
 
 1. Connect to the cluster through ssh \(open a terminal on your local machine\): `ssh YourUserID@YourClusterIPAccess`
 2. Recovery of the project on Github: `git clone https://github.com/thomasdeneker/FAIR_Bioinfo.git`  
 3. Moving around the project repository: `cd FAIR_Bioinfo`
 4. Recovery of the container image with singularity: `singularity pull docker://tdenecker/fair_bioinfo`
-5. Launching the workflow \(depending on the scheduler\): `sbatch fair_bioinfo.slurm` or `qsub fair_bioinfo.qsub`
+5. Launching the workflow: `sbatch fair_bioinfo.slurm` or `qsub fair_bioinfo.qsub`
 6. File recovery from cluster to local \(from a terminal on your local machine\): `scp YourUserID@YourClusterIPAccess:FAIR_Bioinfo/countTable.txt countTable.txt`
 
 ## What about the calculation time?
 
-|  | a small machine on cloud | a big machine on cloud | cluster |
+|  | machine 1 on cloud | machine 2 on cloud | cluster |
 | :--- | :--- | :--- | :--- |
 | Machine configuration | 1 CPU, 2 Go RAM | 8 CPUs, 32 Go RAM | 6 CPUs, 32Go RAM |
 | Duration of the analysis | 1 hour and 23 minutes | 28 minutes | 22 minutes |
-
-We save some times using the cluster. Here we have only 6 input files but the more we have input files, the more the cluster solution will save time.
 
 ## Conclusion
 
@@ -549,5 +547,5 @@ We are confident that: **FAIR raw data** associated to **"FAIR\_bioinfo" scripts
 
 ## It's up to you!
 
-Run the analysis on the cluster or on a VM in parallel.
+Run the analysis on the cluster or on a VM in parallel
 

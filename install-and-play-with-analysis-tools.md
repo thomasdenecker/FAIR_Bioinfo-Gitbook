@@ -8,13 +8,13 @@ description: >-
 
 ## Presentation of workflow tools
 
-We already show you a global view of the analysis workflow \(in the session "It's not magic"\). We will briefly present the fonctionality of each of those tools.
+We already show you a global view of the analysis workflow \(in the chapter [_It's not magic_](https://app.gitbook.com/@fair-bioinfo/s/fair-bioinfo/its-not-magic#a-workflow-to-reply-the-scientific-question)\). We will briefly present the fonctionality of each of those tools.
 
 ### Reads quality control with FastQC
 
 We have downloaded 6 reads sequence files. One good practice is to check of the quality of their sequencing. We do that with the FastQC tool that will provide a report \(in html format, we could open the report into a browser\). In this report, there will be a quality histogram according to the position of the bases, the size of the reads, and many other criteria.
 
-The input for FastQC is a reads file \(see chapter "Data presentation" for more information\):
+The input for FastQC is a reads file \(a `.fastq` file, see [_It's not magic_](https://app.gitbook.com/@fair-bioinfo/s/fair-bioinfo/its-not-magic#data-type) chapter\):
 
 ```text
 @SRR3099585.1 HWI-ST365:427:H8K2HADXX:1:1101:1497:2215/1
@@ -153,7 +153,7 @@ We download it by a browser from this link: [https://www.bioinformatics.babraham
 The file we downloaded is compressed, so we have to decompress it and we can read the documentation. To install the tool, we open a terminal and move \(with the `cd` command\) to the folder where FastQC was decompressed. If we launch it \(`./fastqc`\), we probably obtain:
 
 ```text
-tdenecker@DESKTOP-B8ON598:fastqc_v0.11.8/FastQC$ ./fastqc
+tdenecker@DESKTOP-B8ON598:fastqc_v0.11.9/FastQC$ ./fastqc
 Can't exec "java": No such file or directory at ./fastqc line 283.
 ```
 

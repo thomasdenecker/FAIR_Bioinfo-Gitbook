@@ -126,7 +126,7 @@ If you are reading this, you are trying to answer the following question: What a
 ![](.gitbook/assets/image%20%2822%29.png)
 
 {% hint style="info" %}
-For pedagogical reasons, the different tools will not necessarily be presented in the same order. However, these 7 steps are followed in this order when you carry out an end-to-end project**.**
+For pedagogical reasons, the different companion tools will not necessarily be presented in the same order. However, these 7 steps are followed in this order when you carry out an end-to-end project**.**
 {% endhint %}
 
 ### Schedule

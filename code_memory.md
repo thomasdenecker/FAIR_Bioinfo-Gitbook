@@ -1,7 +1,7 @@
 ---
 description: >-
   Presentation of the Git tool and the Github web-based service, application by
-  saving on Github the code of the previous chapter.
+  saving on Github the code of the previous session.
 ---
 
 # The code memory
@@ -126,7 +126,7 @@ Finally, Git allows you to take a picture at a given time. Let's take the exampl
 
 #### Inform git to track files? `git add`
 
-With `git add` , you will specify who will be in the picture. For example, you only want to see the changes of the children. So you're going to tell all the kids to come to the picture. It is the same principle for files. You specify which ones you want to version. Here, you want to version the file `test.txt` :
+With `git add` , you will specify who will be in the picture. For example, you only want to see the changes of the children. So you're going to tell all the kids to come to the picture. It is the same principle for files. You specify which ones you want to version. Here, you want to version test.txt. 
 
 ```bash
 $ git add test.txt
@@ -326,7 +326,7 @@ Date:   Tue Nov 13 14:49:29 2018 +0100
 
 As everything is going well, now we want to transfer the change to the main branch. 
 
-#### How to transfer changes from one branch to the main branch?  `git merge <branchName>`
+#### How to switch changes from one branch to the main branch?  `git merge <branchName>`
 
 We join the master branch \(`checkout`\), and `merge` the "modification" branch. If we no longer need the branch, we can delete it \(`branch` with option `-d`\):
 
@@ -635,7 +635,7 @@ If not done during your reading, repeat the command lines of the last part of th
 
 ## Resources
 
-* [Version Control with Git](https://swcarpentry.github.io/git-novice/) : the Software Carpentry course
+* [Version Control with Git](https://swcarpentry.github.io/git-novice/t) : the Software Carpentry course
 * [Git & GitHub](http://cupnet.net/git-github/) : the "Pierre Poulain" course \(in french\)
 * [One paper](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004947) : Ten Simple Rules for Taking Advantage of Git and GitHub
 * [Video](https://youtu.be/hPfgekYUKgk) : Start with Git and Github in 30 minutes \(in french\)

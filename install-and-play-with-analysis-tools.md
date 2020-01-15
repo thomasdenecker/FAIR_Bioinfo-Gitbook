@@ -1,8 +1,7 @@
 ---
 description: >-
-  Presentation of the workflow tools, test to install by hand the first one.
-  Then, presentation and installation of conda, a tool that help install other
-  tools.
+  Presentation of the workflow tools, installation by hand of the first one.
+  Then, presentation of conda, a tool that help install other tools.
 ---
 
 # Play with analysis tools

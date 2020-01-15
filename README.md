@@ -160,9 +160,9 @@ Here is the schedule of the 8 sessions presented with the objectives of acquirin
   * FAIR: Projet end \(Githubpages, License, Release, DOI\)
   * WF: your own data and project
 
-We conducted this course in 8 sessions of one and a half hours each, with one chapter presented per session. The course has been built in such a way as to be able to use all the lines of code presented but, depending on the ease of the audience in unix commands \(and sometimes connection times\), it is then preferable to count 2h30 for each session. The auditors were fellow biologists or bioinformaticians from our research institute. 
+We conducted this course in 8 sessions of one and a half hours each, with one chapter presented per session, and a session by month. The course has been built in such a way as to be able to use all the lines of code presented but, depending on the ease of the audience in unix commands \(and sometimes connection times\), it is then preferable to count 2h30 for each session. The auditors were fellow biologists or bioinformaticians from our research institute. 
 
-At the end of each session, an exercise is proposed to replay alone the concepts that have been discussed. We have also opened a communication channel \(slack\) to answer questions or problems between courses. 
+At the end of each session, an exercise is proposed to replay alone the concepts that have been discussed. We have also opened a communication channel \(slack\) to answer questions or problems during the month between two courses. 
 
 All the resources required for the course, both data and software, are downloaded as needed.
 

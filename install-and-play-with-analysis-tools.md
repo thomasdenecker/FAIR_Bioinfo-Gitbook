@@ -1,10 +1,19 @@
 ---
 description: >-
-  Presentation of the workflow tools, installation by hand of the first one.
-  Then, presentation of conda, a tool that help install other tools.
+  Presentation of the workflow tools, test to install by hand the first one.
+  Then, presentation and installation of conda, a tool that help install other
+  tools.
 ---
 
 # Play with analysis tools
+
+{% hint style="info" %}
+Information for trainers:
+
+In case of lack of time, it is better to skip the presentation of the tools of the analysis workflow to concentrate on the tools for reproducibility, here the installation of tools with a package management system as conda. 
+
+The manual installation of FastQC is not meant to be successful but is there for pedagogical reasons: it illustrates the difficulty of a manual installation compared to the installation of the tools with conda.
+{% endhint %}
 
 ## Presentation of workflow tools
 
@@ -27,7 +36,7 @@ GTCGACGAATATAAAGTTATTGGGAGAGACGCTGAAGGTCGCGTTGGAGATGGACTCAATTGCGCTTCGCGTTCGCCTCG
 @CBFFFFFHHGHHJJJHHJJJJJJJJJIJJJJJJIJJJGHJJJJJJHHHHHFFFFFEEEEEEDDDDDDDDDDDDDDDDDDDDDDBDDDDDDDDDDDDDDD
 ```
 
-and the output will be the html report. Below is an example of a quality histogram, with the basic positions of the reads in abscissa and the sequencing quality values ordered. For each position, a moustache box shows the quality values found in the read file, the highest are the best. 
+and the output will be the html report. Below is an example of a quality histogram, with the basic positions of the reads in abscissa and the sequencing quality values ordered. For each position/base, a moustache box shows the quality values found in the read file, the highest are the best. 
 
 ![Example of a quality histogram provided by FastQC](.gitbook/assets/image%20%28204%29.png)
 

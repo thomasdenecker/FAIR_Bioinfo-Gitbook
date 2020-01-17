@@ -6,6 +6,12 @@ description: >-
 
 # A trip to the sea
 
+{% hint style="info" %}
+Information for trainers:
+
+In case of lack of time, it is possible to skip the parts concerning the creation of a docker image and it is usage on a cloud.
+{% endhint %}
+
 ## Point on our reproducibility status
 
 Up to now, we have increase the status of the our analysis considering this reproducibility items:
@@ -363,7 +369,7 @@ hello-world                    latest              f2a91732366c        16 months
 $ docker rmi -f ID_IMAGE
 ```
 
-### How to launch a docker image? =&gt; `docker run`
+### Image to container: how to launch an image? =&gt; `docker run`
 
 We have already launch a docker image! with the `hello-word` container:
 
@@ -414,7 +420,7 @@ Here an example with the [**Rocker** project](https://www.rocker-project.org/):
 
 Another useful docker image is the **galaxy** project : just with a docker run and a little of time, you may have a complete galaxy server on your laptop [bgruening/docker-galaxy-stable](https://github.com/bgruening/docker-galaxy-stable).
 
-#### Commands related to containers
+### Commands related to containers
 
 #### How to list all the containers? \(active images\)  =&gt; `docker ps`
 
@@ -423,10 +429,6 @@ $ docker ps
 CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS              PORTS                              NAMES
 89ed873eb4da        tdenecker/fair_bioinfo   "/bin/sh -c 'jupyter…"   21 minute           Up 21 minutes       8787/tcp, 0.0.0.0:8888->8888/tcp   fair_bioinfo
 ```
-
-
-
-
 
 #### How to stop a container? =&gt; `docker stop`
 
@@ -472,7 +474,7 @@ $ docker rm -f ID_CONTAINER
 
 If your personal laptop lacks of power and if you want to go speeder \(by adding power\), one solution is to exploit virtual machines offered by a cloud resource.
 
-A cloud is an association of physical machines where users instantiate virtual machines. One physical machine can accept one or more virtual machine resulting as the global resources sharing. You have to configure the resources \(CPU number, RAM volume, Disk volume\) of the VM you want/need. It is often done by the way of a web interface.
+A "cloud" is an association of physical machines where users instantiate virtual machines. One physical machine can accept one or more virtual machines resulting as the global resources sharing. You have to configure the resources \(CPU number, RAM volume, Disk volume\) of the VM you want/need. It is often done by the way of a web interface.
 
 If we have the opportunity to access on a cloud resource, we advise you to use it! 
 
@@ -494,7 +496,7 @@ Perform the analysis, **retrieve the results** and turn off your VM!
 
 We will next present you the access through the `ssh` \(**s**ecure **sh**ell\) protocol, a common way to access on remonte and shared resources like clouds.
 
-The first thing to do is to follow the documentation of your resource center to get access. Probably you will have to ask for an account. One you have an account, you may configure it. One of the main configuration is the add of your public ssh-key. The next section explains what is a public ssh-key.
+The first thing to do is to follow the documentation of your resource center to get access. Probably you will have to ask for an account. Once you have an account, you may configure it. One of the main configuration is the add of your public ssh-key. The next section explains what is a public ssh-key.
 
 ### A couple of ssh-keys
 
@@ -537,13 +539,13 @@ $ cat .ssh/id_rsa.pub
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC/GcB30kTCSEJkbdo7SpgW2qavEGmVJYy0JzdMmf8EOWz8++ShTb0S4uuuVMsr4uJmztKkTzcEbV6sNWL9dlPi1RtU6dtZ2OTcx1IrDCSY82MgrzPU3hbOlZT6FPcgUvk5M0oQJgAR12ngQRn6yOm6jYXXczPncrIYwcVkRuyepv+Bdbu8//OIAeyY1d469JDQeXEBLRoNp6UxaOfI10VHHeWQ7o3Rd09k0BM+GT7Hn21NGeA0BWYPmMD6YxORii1T5lzhwGnGqxY2CXFL87Y0Cg6V0lsyF/Ze60iBQc6ckNZJMBa8+YtCQquWIh4Fugi0oRvb444v1Usn6HIHsFDb FAIR_BIOINFO
 ```
 
-During the steps of configuring your account on a cloud/cluster, you may need to copy and paste your public key. Check the one-line format of your copy.
+During the steps of configuring your account on a cloud, you may need to copy and paste your public key. Check the one-line format of your copy.
 
 The 2 keys will now be able to exchange between the machines and this secure protocol replaces a log requiring a password.
 
 ### Access to the virtual machine
 
-When you have the access and configured it, to open a shell is done on your teminal by:  `ssh user@access` where `user` and `access` are provided by your resource center \(`ubuntu` and `134.212.213.90` in the example\):
+When you have the access and have configured it, to open a shell is done on your teminal by:  `ssh user@access` where `user` and `access` are provided by your resource center \(`ubuntu` and `134.212.213.90` in the example\):
 
 ```text
 $ ssh ubuntu@134.212.213.90
@@ -601,7 +603,7 @@ tdenecker/fair_bioinfo   latest              a6c75264ae49        2 months ago   
 
 With the upwards `sudo docker images` command, we see that the fair\_bioinfo docker is running.
 
-Stop it by: `sudo docker stop fair_bioinfo`
+Now, stop it by: `sudo docker stop fair_bioinfo`
 
 To test the application, clone the FAIR\_Bioinfo repository on GitHub, go into the repository, and create a container with opening a communication port \(if the command don't run for you, you may ask your resource center the number for an open port you could use\):
 
@@ -610,7 +612,7 @@ $ git clone https://github.com/thomasdenecker/FAIR_Bioinfo
 $ cd FAIR_Bioinfo
 
 # Create the container
-# 80 is one open port on the cloud
+# 80 is one open port on our cloud, ask for yours
 $ sudo docker run --rm -d -p 80:8888 --name fair_bioinfo -v ${PWD}:/home/rstudio tdenecker/fair_bioinfo
 
 # Execute the application into the container

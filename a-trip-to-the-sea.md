@@ -631,6 +631,8 @@ And all that remains is to wait....
 
 Attention! The final project weighs 42 GB. It is therefore necessary to have a VM with the right dimensions.
 
+
+
 ## Conclusion
 
 ### Some user reactions toward the docker solution

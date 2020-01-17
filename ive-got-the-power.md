@@ -6,6 +6,14 @@ description: >-
 
 # I've got the power !
 
+{% hint style="info" %}
+Information for trainers:
+
+In part called "_Creating the Snakefile of our project_", we detail each rule to create the snakemake of the analysis workflow. This part can be skipped in case of lack of time. 
+
+The part "_Save even more time with a cluster_" suppose a cluster access. Skip also if you haven't. 
+{% endhint %}
+
 Point on our reproducibility and speed:
 
 * [x] automatic scripting
@@ -64,6 +72,8 @@ Why Snakemake?
 
 ### The Snakemake principle: its rule system
 
+The Snakemake's philosophy is based on a system of rules. Three elements make up a rule: input data, processing, and output data. Input and output data are files and the rules are chained to each other by these files: the input files of a rule are the output files of the previous rule.
+
 Definition of a rule:
 
 * a name
@@ -103,7 +113,7 @@ snakemake --forceall --dag | dot -Tsvg > dag_input.svg
 
 A snakefile is the file that contains all the rules that Snakemake will load and execute. Its default name is `Snakefile` \(with the first letter in uppercase\). 
 
-Here is a small Snakefile example with two rules: a rule to indicate the final files we want \(the objective here is to compress files\): 
+Here is a small Snakefile example with two rules: a rule to indicate the final files we want ; the objective here is to compress files: 
 
 ```text
 rule targets:

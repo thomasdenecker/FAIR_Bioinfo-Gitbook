@@ -635,7 +635,7 @@ Here we already had a repository to import to github. But, the best practice is 
 
 ## Conclusion
 
-
+In this chapter we have seen how to version our code files and how to share them with the developer community. We applied this versioning to the code from the previous chapter \(code for creating the project architecture and uploading input files\).
 
 ## It's up to you
 

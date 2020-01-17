@@ -641,7 +641,7 @@ If not done during your reading, repeat the command lines of the last part of th
 
 ## Resources
 
-* [Version Control with Git](https://swcarpentry.github.io/git-novice/) : the Software Carpentry course
+* [Version Control with Git](https://swcarpentry.github.io/git-novice/) : a Software Carpentry lesson
 * [Git & GitHub](http://cupnet.net/git-github/) : the "Pierre Poulain" course \(in french\)
 * [One paper](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004947) : Ten Simple Rules for Taking Advantage of Git and GitHub
 * [Video](https://youtu.be/hPfgekYUKgk) : Start with Git and Github in 30 minutes \(in french\)

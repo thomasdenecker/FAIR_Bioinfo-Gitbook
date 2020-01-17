@@ -674,5 +674,5 @@ Realize the complete analysis workflow on a VM and using the FAIR\_Bioinfo docke
 
 ## Resources
 
-Learning more with docker : [Reproducible computational environments using containers](https://carpentries-incubator.github.io/docker-introduction/index.html), a Carpentries lesson in progress
+Learning more with docker : [Reproducible computational environments using containers](https://carpentries-incubator.github.io/docker-introduction/index.html), a Software Carpentry lesson in progress
 

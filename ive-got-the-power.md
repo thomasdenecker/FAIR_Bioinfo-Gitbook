@@ -11,7 +11,7 @@ Information for trainers:
 
 In part called "_Creating the Snakefile of our project_", we detail each rule to create the snakemake of the analysis workflow. This part can be skipped in case of lack of time. 
 
-The part "_Save even more time with a cluster_" suppose a cluster access. Skip also if you haven't. 
+The part "_Save even more time with a cluster_" suppose an access to a computing cluster. Skip also this part if you haven't a such access.
 {% endhint %}
 
 Point on our reproducibility and speed:
@@ -560,4 +560,11 @@ We are confident that: **FAIR raw data** associated to **"FAIR\_bioinfo" scripts
 ## It's up to you!
 
 Run the analysis on the cluster or on a VM in parallel.
+
+## Resources
+
+* The complete [Snakemake](https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html) tutorial
+* Introduction to [Snakemake](http://slides.com/johanneskoester/ismb-snakemake-tutorial-2019) and its _pro_ towards reproductibility by Johannes Koester
+* The[ Singularity](https://singularity-tutorial.github.io/) tutorial
+* The [Slurm](https://slurm.schedmd.com/tutorials.html) tutorial
 

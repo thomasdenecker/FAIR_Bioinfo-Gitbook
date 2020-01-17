@@ -787,5 +787,5 @@ Change the dataset and add graphs \(for example, a correlation between 2 replica
 
 ## Resources
 
-[Programming with R](http://swcarpentry.github.io/r-novice-inflammation) or [R for Reproducible Scientific Analysis](http://swcarpentry.github.io/r-novice-gapminder) :  the Software Carpentry course
+[Programming with R](http://swcarpentry.github.io/r-novice-inflammation) or [R for Reproducible Scientific Analysis](http://swcarpentry.github.io/r-novice-gapminder) :  a Software Carpentry lesson
 

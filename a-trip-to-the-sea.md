@@ -106,7 +106,7 @@ An image can be used as a model for several containers that will be independent 
 
 The independence is interesting in the context of database queries for example.
 
-### How to create a docker image?
+## How to create a docker image?
 
 To create an image, we will using a file to drive the creation nammed a "dockerfile".
 
@@ -120,7 +120,7 @@ FROM XXX
 RUN XXX
 ```
 
-`FROM` specify the basic image used \(Ubuntu for example\) and `RUN` launch a command \(update the Ubuntu version\). This simple example will give us a docker image with an updated ubuntu 18.04:
+`FROM` specify the basic image used \(Ubuntu for example\) and `RUN` launch a command \(update the Ubuntu version\). This simple example will give us a docker image with an updated but old ubuntu version 18.04:
 
 ```text
 FROM ubuntu:18.04
@@ -140,7 +140,7 @@ To avoid parasitizing the image, put the dockerfile alone in a folder.
 
 ### Create the dockerfile of our project
 
-We now present you the creation of the docker FAIR\_Bioinfo. It is more complex than the previous example, but it is ready to carry out the entire project.
+We now present the creation of the docker FAIR\_Bioinfo. It is more complex than the previous example, but it is ready to carry out the entire project.
 
 **1- entry point**
 
@@ -193,7 +193,7 @@ RUN conda config --add channels bioconda
 RUN conda install -c bioconda -c conda-forge snakemake
 ```
 
-**6- Installation of our workflow tools**
+**6- Installation of the tools for the analysis workflow**
 
 ```text
 RUN conda install -y fastqc bowtie2 htseq samtools
@@ -266,7 +266,7 @@ And what... ?
 
 **12- Save this dockerfile on GitHub!**
 
-### How to share an image?
+### How to share an image on a depot? =&gt; `docker push`
 
 To share our image, we make it awailable in depots such as **DockerHub**
 
@@ -303,7 +303,7 @@ It's look like:
 
 ![](https://s3.amazonaws.com/media-p.slid.es/uploads/991142/images/5941315/pasted-from-clipboard.png)
 
-### How to pick up a docker?
+### How to pick up an image on a depot? =&gt; `docker pull`
 
 ```text
 $ docker pull tdenecker/fair_bioinfo
@@ -311,9 +311,9 @@ $ docker pull tdenecker/fair_bioinfo
 
 And the image will be available locally.
 
-### Useful commands
+## Useful docker commands
 
-#### Information on Docker =&gt; docker version 
+#### Information on Docker =&gt; `docker version` 
 
 ```text
 $ docker version
@@ -337,7 +337,11 @@ Server: Docker Engine - Community
   Experimental:     true
 ```
 
-#### Locally available images =&gt; docker images
+### Commands related to images
+
+#### Locally available images =&gt; `docker images`
+
+Each time an image is uploaded or a container is used, the image file is saved by docker and can be listed. Here is an example with nine images, but if this is the first time you use docker, this command will only display 2 images, the `fair_bioinfo` \(3rd image on the example\) we just pull and the `hello_world` \(last image\) that matches the image used for the docker installation test:
 
 ```text
 $ docker images
@@ -353,7 +357,13 @@ tdenecker/bpeaks_db            latest              91c3c0c2f18e        8 months 
 hello-world                    latest              f2a91732366c        16 months ag
 ```
 
-### How to launch a docker image? =&gt; docker run
+#### How to suppress an image? =&gt; `docker rmi`
+
+```text
+$ docker rmi -f ID_IMAGE
+```
+
+### How to launch a docker image? =&gt; `docker run`
 
 We have already launch a docker image! with the "hello-word" container:
 
@@ -361,7 +371,9 @@ We have already launch a docker image! with the "hello-word" container:
 $ docker run hello-world
 ```
 
-### Launch the image of our project
+But it is a very simple launch as it contains no interaction with the data or the user. We need more interactions: docker need to access data to analyze them, and one the analysis workflow ended, user need to see the results. 
+
+#### Launch the image of our project
 
 ```text
 $ docker run --rm -d -p 8888:8888 --name fair_bioinfo -v WORKING/PATH:/home/rstudio tdenecker/fair_bioinfo
@@ -384,14 +396,53 @@ Here an example with the [**Rocker** project](https://www.rocker-project.org/):
 
 Another useful docker image is the **galaxy** project : just with a docker run and a little of time, you may have a complete galaxy server on your laptop [bgruening/docker-galaxy-stable](https://github.com/bgruening/docker-galaxy-stable).
 
-### Useful docker commands
+#### Data share between docker and local repository
 
-#### How to list all the containers? \(active images\)  =&gt; docker ps
+When we wish to run a task, we often want to access to the results obtained with the input data. But as docker is also use to isolate a task from the rest of the world, we have to specify to docker the space it can access. We need to share a "volume" with the docker container. The option `-v` \(volume\) associates two volumes/repositories, one from our local architecture and one from the container architecture. 
+
+The schema hereafter shows how using the `-v` option give access to the local repository : with the `-v` option, the `ls` command lists the local file `test.txt` what it does not do when the option is not used.
+
+
+
+![Effet of a volumes association](.gitbook/assets/image%20%287%29.png)
+
+It is  volumes association is a bidirectional sharing:
+
+![](.gitbook/assets/image%20%28185%29.png)
+
+The modifications done in the local side are visible into the docker container and the reverse is true, the modifications done inside the docker container are visible in the local repository.
+
+Note that it needs of absolute paths.
+
+
+
+#### Commands related to containers
+
+#### How to list all the containers? \(active images\)  =&gt; `docker ps`
 
 ```text
 $ docker ps
 CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS              PORTS                              NAMES
 89ed873eb4da        tdenecker/fair_bioinfo   "/bin/sh -c 'jupyter…"   21 minute           Up 21 minutes       8787/tcp, 0.0.0.0:8888->8888/tcp   fair_bioinfo
+```
+
+#### How to stop a container? =&gt; `docker stop`
+
+We will stop a running container using its name or using its ID. Those values are given by a `docker ps` command:
+
+```text
+ docker ps
+CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS              PORTS                              NAMES
+89ed873eb4da        tdenecker/fair_bioinfo   "/bin/sh -c 'jupyter…"   30 minutes ago      Up 30 minutes       8787/tcp, 0.0.0.0:8888->8888/tcp   fair_bioinfo
+
+$ docker stop fair_bioinfo 
+
+## or 
+
+$ docker stop 89ed873eb4da
+
+$ docker ps
+CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS              PORTS                              NAMES
 ```
 
 #### How to go into a container?  `docker exec -it`
@@ -409,51 +460,10 @@ It is a bash like other so we can execute our analysis script or any other comma
 rstudio@89ed873eb4da:~$ exit
 ```
 
-#### How to stop a container? `docker stop`
-
-We will stop a running container using both its name or its ID. Those values are given by a `docker ps` command:
-
-```text
- docker ps
-CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS              PORTS                              NAMES
-89ed873eb4da        tdenecker/fair_bioinfo   "/bin/sh -c 'jupyter…"   30 minutes ago      Up 30 minutes       8787/tcp, 0.0.0.0:8888->8888/tcp   fair_bioinfo
-
-$ docker stop fair_bioinfo 
-
-## or 
-
-$ docker stop 89ed873eb4da
-
-$ docker ps
-CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS              PORTS                              NAMES
-```
-
-#### Data share between docker and local repository
-
-When we wish to run a task, we often want to access to the results obtained with the input data. But as docker is also use to isolate a task from the rest of the world, we have to specify to docker the space it can access. We need to share a "volume" with the docker container. The option `-v` \(volume\) associates two volumes/repositories, one from our local architecture and one from the container architecture. 
-
-The schema hereafter shows how using the `-v` option give access to the local repository : with the `-v` option, the `ls` command lists the local file `test.txt` what it does not do when the option is not used.
-
-![Effet of a volumes association](.gitbook/assets/image%20%287%29.png)
-
-It is  volumes association is a bidirectional sharing:
-
-![](.gitbook/assets/image%20%28185%29.png)
-
-The modifications done in the local side are visible into the docker container and the reverse is true, the modifications done inside the docker container are visible in the local repository.
-
-Note that it needs of absolute paths.
-
 #### How to suppress a container? `docker rm`
 
 ```text
 $ docker rm -f ID_CONTAINER
-```
-
-#### How to suppress an image? `docker rmi`
-
-```text
-$ docker rmi -f ID_IMAGE
 ```
 
 ## Use a docker image on a cloud

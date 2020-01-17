@@ -16,6 +16,8 @@ The tools we choose to manage the reproducibility have others equivalents but th
 
 We also choose to start from a very low level of computer skills so that all this documentation can be followed by our biologist colleagues. During this training, we will use a number of tools. To use a computer tool, there is three steps to follow: i\) install it and configure the environment, ii\) use it, iii\) develop it. In this book, these 3 steps will be discussed for several of the tools presented because the development step is the one that allows maximum autonomy.
 
+We have chosen to explain the majority of the commands and tools we will use to increase reproducibility. Thus, not only the use of the tools is detailed, but also their creation \(e.g. create your own docker image, your own snakefile, ...\). These creation steps can be skipped if there is not enough time, and to only use the tools provided by the community that develops these basic bricks. This way of doing things, restricts to "use", will constitute a loss of autonomy and will risk making these parts "magic". This results in 2 learning modes, full or restricted. For the restricted mode follow the instructions given at the beginning of each chapter concerning the parts that can be skipped.
+
 {% hint style="info" %}
 This training was initially designed for a French audience. Indeed, there are few resources on reproducibility in the language of Molière. You can find all the slides presented on the FAIR\_Bioinfo Github repository: [https://github.com/thomasdenecker/FAIR\_Bioinfo](https://github.com/thomasdenecker/FAIR_Bioinfo)
 {% endhint %}

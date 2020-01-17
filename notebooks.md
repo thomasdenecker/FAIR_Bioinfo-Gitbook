@@ -753,7 +753,11 @@ With this session, you know / you have the leads for creating an analysis report
 
 You cans add in the application seen at the previous session a button that generates a Notebook containing the figure and graphic parameters.
 
+## Resources
 
+* [Jupyter notebook](https://jupyter-notebook.readthedocs.io/en/latest/)
+* [Markdown](https://guides.github.com/features/mastering-markdown/)
+* [Rmarkdown](https://rmarkdown.rstudio.com/lesson-1.html)
 
 
 

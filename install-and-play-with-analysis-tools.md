@@ -277,6 +277,5 @@ conda install -y fastqc bowtie2 htseq samtools
 
 ## Ressources
 
-* Turorial for each tool of the analysis workflow : [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/), [bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml), [IGV](https://software.broadinstitute.org/software/igv/UserGuide), [Samtools](http://www.htslib.org/doc/samtools.1.html), [HTSeq](https://htseq.readthedocs.io), [DESeq2](http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html) \([SARtools](https://github.com/PF2-pasteur-fr/SARTools)\) 
-* The [Conda](https://conda.io/en/latest/) documentation
+
 

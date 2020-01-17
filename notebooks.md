@@ -7,7 +7,7 @@ description: >-
 # Valuation and sharing with notebooks
 
 {% hint style="info" %}
-Information for the trainer: 
+Information for trainers: 
 
 We present the Jupyter notebook \(and its association with Github and binder\) because it is a very used notebook, but due to the Rshiny part of the application, our notebook is writen in Rmarkdown. So in case of lack of time, it is possible to focus only on the "Markdown", "Rmarrkdown", and "Rmarkdown and Shiny" parts.
 {% endhint %}

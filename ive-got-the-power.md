@@ -544,11 +544,11 @@ We save some times using the cluster. Here we have only 6 input files but the mo
 
 ## Conclusion
 
-In this Chapter, we gain in reproducibility and speed. We realize the:
+In this chapter, we gain in reproducibility and speed. We realize the:
 
 * Implementation of an automatic workflow system
 * Use of the parallelization power
-* Increasing the performance of a dock worker
+* Increasing the performance of the docker by using aspera for the input data download
 * Use of a computing cluster
 
 Parallelization associated to the use of a cluster are two solutions that decrease the analysis time and may be seen as:

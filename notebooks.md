@@ -7,7 +7,7 @@ description: >-
 # Valuation and sharing with notebooks
 
 {% hint style="info" %}
-Information for trainers: 
+Information for the trainer: 
 
 We present the Jupyter notebook \(and its association with Github and binder\) because it is a very used notebook, but due to the Rshiny part of the application, our notebook is writen in Rmarkdown. So in case of lack of time, it is possible to focus only on the "Markdown", "Rmarrkdown", and "Rmarkdown and Shiny" parts.
 {% endhint %}
@@ -742,22 +742,18 @@ It depends on your project!
 
 **Jupyter** is ideal for all projects with an aspect that can be configured by users. It is adapted to other languages than R. For information, Jupyter is initially designed for Python development.
 
-### Review of chapter
+### Review of session
 
-With this chapter, you know / you have the leads for creating an analysis report with Jupyter or Rmarkdown. Thanks to Binder or  HTLM page generation, you can share your notebooks easily. We also increased the reproducibility of the FAIR\_Bioinfo web application using:
+With this session, you know / you have the leads for creating an analysis report with Jupyter or Rmarkdown. Thanks to Binder or  HTLM page generation, you can share your notebooks easily. We also increased the reproducibility of the FAIR\_Bioinfo web application using:
 
 * an analysis report
 * a Parameter File
 
-## It's up to you
+### Homework before the next session
 
-Add in the application seen at the previous session a button that generates a Notebook containing the figure and graphic parameters.
+You cans add in the application seen at the previous session a button that generates a Notebook containing the figure and graphic parameters.
 
-## Resources
 
-* [Jupyter notebook](https://jupyter-notebook.readthedocs.io/en/latest/)
-* [Markdown](https://guides.github.com/features/mastering-markdown/)
-* [Rmarkdown](https://rmarkdown.rstudio.com/lesson-1.html)
 
 
 

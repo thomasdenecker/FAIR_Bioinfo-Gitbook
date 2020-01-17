@@ -633,6 +633,10 @@ To https://github.com/thomasdenecker/Fair_project.git
 Here we already had a repository to import to github. But, the best practice is rather to start by creating the git framework before creating the script that structures the project.
 {% endhint %}
 
+## Conclusion
+
+
+
 ## It's up to you
 
 {% hint style="success" %}

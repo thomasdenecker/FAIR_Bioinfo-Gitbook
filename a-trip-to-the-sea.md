@@ -635,8 +635,6 @@ Attention! The final project weighs 42 GB. It is therefore necessary to have a V
 
 ## Conclusion
 
-In this chapter we discovered how to fix the operating system of our project using the container concept. We defined our own container and use it on a virtual machine. We completely ran the analysis part of the project, the analysis workflow, and uploaded the result of the workflow that will serve for interactions with user in the second part of the project.
-
 ### Some user reactions toward the docker solution
 
 > _Super complicated for not much!_

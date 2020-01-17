@@ -1,4 +1,16 @@
+---
+description: >-
+  We present different notebooks that allow you to share code associated with
+  its explanatory text.
+---
+
 # Valuation and sharing with notebooks
+
+{% hint style="info" %}
+Information for the trainer: 
+
+We present the Jupyter notebook \(and its association with Github and binder\) because it is a very used notebook, but due to the Rshiny part of the application, our notebook is writen in Rmarkdown. So in case of lack of time, it is possible to focus only on the "Markdown", "Rmarrkdown", and "Rmarkdown and Shiny" parts.
+{% endhint %}
 
 ## What's a notebook?
 
@@ -22,7 +34,7 @@ You can find [here ](https://guides.github.com/features/mastering-markdown/)Gith
 
 Markdown also has his cheat sheet \([here](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)\).
 
-![Markdown cheat sheet ](.gitbook/assets/image%20%28164%29.png)
+![Markdown cheat sheet ](.gitbook/assets/image%20%28165%29.png)
 
 ## Quick review of basic orders
 
@@ -102,7 +114,7 @@ The address can be local \(relative address\) or a URL.
 
 **Rendering**
 
-![](.gitbook/assets/image%20%28148%29.png)
+![](.gitbook/assets/image%20%28149%29.png)
 
 ### Link
 
@@ -166,11 +178,11 @@ Jupyter project is the first tool to create Notebook. The extension of Jupyter n
 
 It's a project in full expansion! About 4.5 million notebooks jupiter on Github! \(End of May 2019 - source [here](https://nbviewer.jupyter.org/github/parente/nbestimate/blob/master/estimate.ipynb)\)
 
-![GitHub search hits for 1694 days ](.gitbook/assets/image%20%28150%29.png)
+![GitHub search hits for 1694 days ](.gitbook/assets/image%20%28151%29.png)
 
 Jupyter is used by the greatest ...
 
-![Screenshot of the home page of the Jupyter project](.gitbook/assets/image%20%28181%29.png)
+![Screenshot of the home page of the Jupyter project](.gitbook/assets/image%20%28182%29.png)
 
 ... and there are many articles about it :
 
@@ -268,7 +280,7 @@ Paste this key and log in \(position in the next picture\) .
 
 You're connected in your Jupyter server.
 
-![Jupyter with docker](.gitbook/assets/image%20%28119%29.png)
+![Jupyter with docker](.gitbook/assets/image%20%28120%29.png)
 
 In the work folder is your shared folder \(by volume\).
 
@@ -276,7 +288,7 @@ In the work folder is your shared folder \(by volume\).
 
 Click on New and select a kernel \(R, Python , ...\)
 
-![](.gitbook/assets/image%20%28125%29.png)
+![](.gitbook/assets/image%20%28126%29.png)
 
 ### In the notebook
 
@@ -288,7 +300,7 @@ The main commands are:
 * **Execute** : execute code in a cell
 * **Code** : Type of cell \(code or markdown\)
 
-![](.gitbook/assets/image%20%28207%29.png)
+![](.gitbook/assets/image%20%28208%29.png)
 
 **A example before execution** 
 
@@ -296,7 +308,7 @@ The main commands are:
 
 **This example after execution** 
 
-![](.gitbook/assets/image%20%28157%29.png)
+![](.gitbook/assets/image%20%28158%29.png)
 
 ## Binder
 
@@ -306,13 +318,13 @@ With Binder, the objective is to take control of the notebook directly from Gith
 
 You can find an example in Github \([here](https://github.com/thomasdenecker/notebookJupyter)\). It's a simple notebook R. 
 
-![](.gitbook/assets/image%20%28144%29.png)
+![](.gitbook/assets/image%20%28145%29.png)
 
 ### 2- Connect Binder with Github
 
 To connect Github and Binder, simply copy the repository address to the [Binder website](https://gke.mybinder.org/). If several notebooks are present in the repository, you can specify the notebook to be generated
 
-![](.gitbook/assets/image%20%28168%29.png)
+![](.gitbook/assets/image%20%28169%29.png)
 
 You can copy markdown link and paste this link in your README. Thus, you have a clickable badge that will automatically launch binder with your notebook.
 
@@ -352,7 +364,7 @@ One solution: make several dockers \(1 docker = 1 tool\)
 
 By clicking on the badge, we get the following display:
 
-![](.gitbook/assets/image%20%28109%29.png)
+![](.gitbook/assets/image%20%28110%29.png)
 
 It is possible to make changes in the notebook and execute them. The changes will not be saved in Github but you can save them as the new file. The Jupyter interface is identical to the interface you have on your computer.
 
@@ -388,11 +400,11 @@ jupyter lab
 
 To start, you must choose your kernel on the following home page:
 
-![Home page](.gitbook/assets/image%20%28113%29.png)
+![Home page](.gitbook/assets/image%20%28114%29.png)
 
 Then, the notebook is created. The interface is exactly the same and the use is identical.
 
-![A notebook in JupyterLab](.gitbook/assets/image%20%28194%29.png)
+![A notebook in JupyterLab](.gitbook/assets/image%20%28195%29.png)
 
 On the right-hand side you will find a configuration window. It allows you to add a console under your notebook \(to test it during your development\).
 
@@ -402,7 +414,7 @@ On the right-hand side you will find a configuration window. It allows you to ad
 
 Rmarkdown is another solution for creating notebooks. This is R's association with markdown.
 
-![](.gitbook/assets/image%20%28200%29.png)
+![](.gitbook/assets/image%20%28201%29.png)
 
 To create a Rmarkdown notebook, the easiest way is to use Rstudio. You can use the Rstudio that is in our FAIR\_Bionfo docker, a docker that combines Jupyter, Binder and Rstudio.
 
@@ -414,11 +426,11 @@ docker run --rm -d -p 80:8888 --name fair_bioinfo -v ${PWD}:/home/rstudio tdenec
 
 Click on FIle &gt; New FIle &gt; Rmarkdown or on File icon with a green plus.
 
-![](.gitbook/assets/image%20%28112%29.png)
+![](.gitbook/assets/image%20%28113%29.png)
 
 Rstudio creates a Rmarkdown file \(.Rmd\) with default content to help you get started with the system.
 
-![](.gitbook/assets/image%20%28210%29.png)
+![](.gitbook/assets/image%20%28211%29.png)
 
 After, you can save this notebook in HTML format \(or PDF,...\).
 
@@ -426,7 +438,7 @@ After, you can save this notebook in HTML format \(or PDF,...\).
 
 The HTML page obtained is as follows 
 
-![](.gitbook/assets/image%20%28175%29.png)
+![](.gitbook/assets/image%20%28176%29.png)
 
 ### Building a notebook with R
 
@@ -665,7 +677,7 @@ params$si
 
 When the report is created, a parameter file is created.
 
-![](.gitbook/assets/image%20%28172%29.png)
+![](.gitbook/assets/image%20%28173%29.png)
 
 By modifying the application a little, you can import this file to update the settings.
 
@@ -714,7 +726,7 @@ if(!is.null(input$ParamsFile$datapath)){
 
 Default parameters are as follows
 
-![](.gitbook/assets/image%20%28173%29.png)
+![](.gitbook/assets/image%20%28174%29.png)
 
 After import example parameter file 
 

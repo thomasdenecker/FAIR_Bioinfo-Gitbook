@@ -74,7 +74,7 @@ First , It is necessary to create a docs/ folder. The home page file must be ind
 
 Then, as before, all that remains is to change the source \(master branch /docs folder\) and not to choose a theme.
 
-![](.gitbook/assets/image%20%28213%29.png)
+![](.gitbook/assets/image%20%28214%29.png)
 
 You find a complete example [here](https://thomasdenecker.github.io/bPeaks-application/).
 
@@ -88,15 +88,15 @@ The purpose of a license is to determine whether users can use, modify and distr
 
 When you name this file LICENSE, Github offers you to use license templates
 
-![](.gitbook/assets/image%20%28201%29.png)
+![](.gitbook/assets/image%20%28202%29.png)
 
 All you have to do is choose the right license for your project and Github will take care of the rest!
 
-![](.gitbook/assets/image%20%28165%29.png)
+![](.gitbook/assets/image%20%28166%29.png)
 
 Once you have validated and then merged with the main branch, your license will be ready. When you click on it, you will get something like the following image :
 
-![](.gitbook/assets/image%20%28212%29.png)
+![](.gitbook/assets/image%20%28213%29.png)
 
 ### Create a release 
 
@@ -108,7 +108,7 @@ First, click on 0 releases  and after 'Create a new release'
 
 To create a release you need to give a version tag and a title.
 
-![](.gitbook/assets/image%20%28211%29.png)
+![](.gitbook/assets/image%20%28212%29.png)
 
 **How do version tags work?**
 
@@ -134,9 +134,9 @@ DOI or Digital Object Identifiers is a referencing system for quoting a project.
 
 3- Flip the switch to on
 
-![](.gitbook/assets/image%20%28152%29.png)
+![](.gitbook/assets/image%20%28153%29.png)
 
-![](.gitbook/assets/image%20%28169%29.png)
+![](.gitbook/assets/image%20%28170%29.png)
 
 Zenodo then sends you the following message
 
@@ -150,7 +150,7 @@ Et voilà !
 
 Your project has a DOI. All that remains is to add the badge to the README. Click on the badge in Zenodo then copy the code in the Markdown part. Copy this code into your README file at the top of the file.
 
-![Copy Markdown into your README](.gitbook/assets/image%20%28131%29.png)
+![Copy Markdown into your README](.gitbook/assets/image%20%28132%29.png)
 
 We have the badge in the README
 

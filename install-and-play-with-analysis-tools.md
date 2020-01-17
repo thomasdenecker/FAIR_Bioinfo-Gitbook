@@ -38,7 +38,7 @@ GTCGACGAATATAAAGTTATTGGGAGAGACGCTGAAGGTCGCGTTGGAGATGGACTCAATTGCGCTTCGCGTTCGCCTCG
 
 and the output will be the html report. Below is an example of a quality histogram, with the basic positions of the reads in abscissa and the sequencing quality values ordered. For each position/base, a moustache box shows the quality values found in the read file, the highest are the best. 
 
-![Example of a quality histogram provided by FastQC](.gitbook/assets/image%20%28204%29.png)
+![Example of a quality histogram provided by FastQC](.gitbook/assets/image%20%28205%29.png)
 
 We can divide in 3 parts the quality histogram below: from base 1 to 20, the quality is good; from base 21 to 26, the quality is medium; and for the last bases, the quality is poor.
 
@@ -95,11 +95,11 @@ At this stage, we have sam files. These are large files and it is possible and d
 
 A bam file is no longer readable by humans but is lighter than its corresponding sam file:
 
-![Reduction of a sam file by converting it into bam format](.gitbook/assets/image%20%28110%29.png)
+![Reduction of a sam file by converting it into bam format](.gitbook/assets/image%20%28111%29.png)
 
 By adding an indexing step of the bam file, it allows us to operate the computer with tasks for which it has been optimized. This indexing step provides a `.bai` file that constitutes the index. 
 
-![](.gitbook/assets/image%20%28187%29.png)
+![](.gitbook/assets/image%20%28188%29.png)
 
 Reducing sam files and using samtools with bam and bai files will gain us times due to the lightness of the resulting files.
 
@@ -109,7 +109,7 @@ One time more: as we have 6 inputs files, we need to run 6 times this samtools s
 
 Many tools offer to visualize the reads mapped to the genome. We will use IGV \(**I**ntegrative **G**enome **V**iewer\). This tool need 3 kinds of input: the sequence of the reference genome \(file in`fasta` format\), the corresponding annotations associated to this sequence \(file in `gff` format\), and one or more reads mapping files \(file in `bam` format\).
 
-![](.gitbook/assets/image%20%28141%29.png)
+![](.gitbook/assets/image%20%28142%29.png)
 
 #### Genomic Feature annotation File
 
@@ -121,7 +121,7 @@ A gff formated file is composed of 9 columns, indicating the genomic positions a
 
 The next screenshot, is an IGV visualisation centered on one gene, the gene ostta18g0198 \(gene number 198 on the 18th chromosome of the _Ostreococcus tauri_ genome\). Two mapping files were imported, one for each condition \(uper: standard condition, lower: iron depletion condition\).
 
-![IGV visualisation of the ostta18g0198 gene.](.gitbook/assets/image%20%28197%29.png)
+![IGV visualisation of the ostta18g0198 gene.](.gitbook/assets/image%20%28198%29.png)
 
 Th_e ostta18g0198_ gene is differentialy expressed between the 2 conditions: it is more expressed in case of iron depletion.
 
@@ -129,7 +129,7 @@ Th_e ostta18g0198_ gene is differentialy expressed between the 2 conditions: it 
 
 The transcriptional activity of genes is assumed to be proportional to the number of mapped reads observed. So the next step of the analysis is to count the number of reads per gene. We use HTseq-count tool for that. With a genome annotation file \(gff format\) and the reads alignment file \(bam format\), HTseq-count tool provides a table with 2 columns, gene name and number of reads mapped on it.
 
-![](.gitbook/assets/image%20%28130%29.png)
+![](.gitbook/assets/image%20%28131%29.png)
 
 Once more: as we have 6 inputs files, we need to run 6 times this HTseq-count step.
 
@@ -137,11 +137,11 @@ Once more: as we have 6 inputs files, we need to run 6 times this HTseq-count st
 
 Now we have the data to reply the scientific question: which genes are expressed differently between the 2 conditions of the study? The differential analysis of gene expression is based on a statistical model. We chose DESeq2, a tool designed for this task. Working with all the count tables, DESeq2 will provide a logFC and an adjusted P-value for each gene that allow us to select genes to focus on.
 
-![DESeq2 inputs](.gitbook/assets/image%20%28123%29.png)
+![DESeq2 inputs](.gitbook/assets/image%20%28124%29.png)
 
 DESeq2 provides numerous graphs that illustrate each statistical decision it makes based on default threshold values. It is a good practice to carefully look at the results to eventually change one or more default parameters and re-run this step.
 
-![Example of 2 DESeq2 result graphs: Mean-Average plot \(left\) and Volcano plot \(right\)](.gitbook/assets/image%20%28111%29.png)
+![Example of 2 DESeq2 result graphs: Mean-Average plot \(left\) and Volcano plot \(right\)](.gitbook/assets/image%20%28112%29.png)
 
 The more there are replicas in each condition, the more the statistical test is powerful.
 
@@ -182,7 +182,7 @@ Yes it is! We will use the conda solution.
 
 ## Presentation of conda 
 
-![](.gitbook/assets/image%20%28199%29.png)
+![](.gitbook/assets/image%20%28200%29.png)
 
 Conda is an open source package and environment manager. Conda may:
 
@@ -194,7 +194,7 @@ It is multi-platform: _ie_. for Windows, macOS and Linux and above all it has no
 
 Conda works with channels through which packages are accessed. For bioinformatics tools, there is a dedicated channel called "Bioconda".
 
-![](.gitbook/assets/image%20%28198%29.png)
+![](.gitbook/assets/image%20%28199%29.png)
 
 Bioconda is a software distribution channel, usable by the conda package manager and offering many software used in bioinformatics.
 

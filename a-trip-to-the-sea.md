@@ -25,7 +25,7 @@ In this chapter, we will set the operating system.
 
 There is at least two solutions that allow us to have several operating systems on the same physical machine: Virtualization or Containerization.
 
-![Differencies between Vitualization \(left\) and Containerization \(rigth\)](.gitbook/assets/image%20%28208%29.png)
+![Differencies between Vitualization \(left\) and Containerization \(rigth\)](.gitbook/assets/image%20%28209%29.png)
 
 This schema show us that Containerization is lighter than Virtualization. As Containerization is lighter, it is also faster to install and therefore easier to share and more portable. 
 
@@ -365,15 +365,33 @@ $ docker rmi -f ID_IMAGE
 
 ### How to launch a docker image? =&gt; `docker run`
 
-We have already launch a docker image! with the "hello-word" container:
+We have already launch a docker image! with the `hello-word` container:
 
 ```text
 $ docker run hello-world
 ```
 
-But it is a very simple launch as it contains no interaction with the data or the user. We need more interactions: docker need to access data to analyze them, and one the analysis workflow ended, user need to see the results. 
+But it is a very simple launch as it contains no interaction with the data or the user. Our project need more interactions: docker need to access data to analyze them, and one the analysis workflow ended, user need to see the results. Lets see how to our share data with the container.
 
-#### Launch the image of our project
+#### Data share between docker and local repository
+
+When we wish to run a task, we often want to access to the results obtained with the input data. But as docker is also use to isolate a task from the rest of the world, we have to specify to docker the space it can access. We need to share a "volume" with the docker container. The option `-v` \(**v**olume\) associates two volumes/repositories, the first from our local architecture and the second from the container architecture. 
+
+The schema hereafter shows how using the `-v` option give access to the local repository : with the `-v` option, the `ls` command lists the local file `test.txt` what it does not do when the option is not used.
+
+
+
+![Effet of a volumes association](.gitbook/assets/image%20%287%29.png)
+
+It is  volumes association is a bidirectional sharing:
+
+![](.gitbook/assets/image%20%28186%29.png)
+
+The modifications done in the local side are visible into the docker container and the reverse is true, the modifications done inside the docker container are visible in the local repository.
+
+Note that it needs of absolute paths.
+
+#### Launch the image of our project <a id="launch-the-image-of-our-project"></a>
 
 ```text
 $ docker run --rm -d -p 8888:8888 --name fair_bioinfo -v WORKING/PATH:/home/rstudio tdenecker/fair_bioinfo
@@ -392,29 +410,9 @@ Don't panic, there is documentation!
 
 Here an example with the [**Rocker** project](https://www.rocker-project.org/):
 
-![](.gitbook/assets/image%20%28126%29.png)
+![documentation of the Rocker project](.gitbook/assets/image%20%28107%29.png)
 
 Another useful docker image is the **galaxy** project : just with a docker run and a little of time, you may have a complete galaxy server on your laptop [bgruening/docker-galaxy-stable](https://github.com/bgruening/docker-galaxy-stable).
-
-#### Data share between docker and local repository
-
-When we wish to run a task, we often want to access to the results obtained with the input data. But as docker is also use to isolate a task from the rest of the world, we have to specify to docker the space it can access. We need to share a "volume" with the docker container. The option `-v` \(volume\) associates two volumes/repositories, one from our local architecture and one from the container architecture. 
-
-The schema hereafter shows how using the `-v` option give access to the local repository : with the `-v` option, the `ls` command lists the local file `test.txt` what it does not do when the option is not used.
-
-
-
-![Effet of a volumes association](.gitbook/assets/image%20%287%29.png)
-
-It is  volumes association is a bidirectional sharing:
-
-![](.gitbook/assets/image%20%28185%29.png)
-
-The modifications done in the local side are visible into the docker container and the reverse is true, the modifications done inside the docker container are visible in the local repository.
-
-Note that it needs of absolute paths.
-
-
 
 #### Commands related to containers
 
@@ -425,6 +423,10 @@ $ docker ps
 CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS              PORTS                              NAMES
 89ed873eb4da        tdenecker/fair_bioinfo   "/bin/sh -c 'jupyter…"   21 minute           Up 21 minutes       8787/tcp, 0.0.0.0:8888->8888/tcp   fair_bioinfo
 ```
+
+
+
+
 
 #### How to stop a container? =&gt; `docker stop`
 
@@ -445,7 +447,7 @@ $ docker ps
 CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS              PORTS                              NAMES
 ```
 
-#### How to go into a container?  `docker exec -it`
+#### How to go into a container? =&gt;  `docker exec -it`
 
 Sometimes we want to explore the content of a container. We can do that by executing the container with its iterative mode. In this mode, the container is waiting your `exit` command to close. In the next example, we want to go into the bash of our docker. Once the `docker exec -it` launched, we can see a "prompt", a new command invite which displays the user name we defined in the dockerfile, _ie._ "rstudio". 
 
@@ -460,7 +462,7 @@ It is a bash like other so we can execute our analysis script or any other comma
 rstudio@89ed873eb4da:~$ exit
 ```
 
-#### How to suppress a container? `docker rm`
+#### How to suppress a container? =&gt; `docker rm`
 
 ```text
 $ docker rm -f ID_CONTAINER
@@ -658,7 +660,7 @@ Docker will probably be the solution in the future!
 
 ### Where are we in terms of reproducibility?
 
-![Practical Computational Reproducibility in the Life Sciences - Bj&#xF6;rn Gr&#xFC;ning et al \(2018\)](.gitbook/assets/image%20%28122%29.png)
+![Practical Computational Reproducibility in the Life Sciences - Bj&#xF6;rn Gr&#xFC;ning et al \(2018\)](.gitbook/assets/image%20%28123%29.png)
 
 From the schema of [Björn Grüning _et al._](https://doi.org/10.1016/j.cels.2018.03.014), we have reach the last stack of reproducibility, with the same reproducibility tools than they: git, conda, docker, and a VM.
 

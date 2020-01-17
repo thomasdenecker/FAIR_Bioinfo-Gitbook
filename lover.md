@@ -7,6 +7,16 @@ description: >-
 
 # LoveR
 
+{% hint style="info" %}
+Information for the trainer: 
+
+R language was known by our learners so we haven't add a R language presentation part in this session. Many resources exists to conceive it. See some references at the end of the session.
+
+In order to make the exploration of the statistical analysis part reactive to the interactions with the user, we have chosen to present the R-shiny package as well as the underlying functioning of an associated web application.
+
+In case of lack of time, the opening to other R packages \(part _The R power_\) can be avoided.
+{% endhint %}
+
 In this chapter, we carry out the last step of the analysis, the detection of genes with a different expression between the two conditions analyzed. We will offer the user of the application the possibility to visualize the results \(the counting table\) and even to interact dynamically with the results by allowing the user to change the settings of this step \(such as the threshold values chosen for statistical tests or the color of the graphs\). The reproducibility progress will be achieved by saving the settings chosen by the user.
 
 To achieve those objectives:
@@ -18,7 +28,7 @@ To achieve those objectives:
 
 we will use:
 
-![Logos of R and Shiny application](.gitbook/assets/image%20%28118%29.png)
+![Logos of R and Shiny application](.gitbook/assets/image%20%28119%29.png)
 
 ## The R project
 
@@ -36,17 +46,17 @@ The CRAN: [https://cran.r-project.org/](https://cran.r-project.org/)
 
 Many cheat sheets are available: [https://www.rstudio.com/resources/cheatsheets/](https://www.rstudio.com/resources/cheatsheets/)
 
-![](.gitbook/assets/image%20%28186%29.png)
+![](.gitbook/assets/image%20%28187%29.png)
 
 ### A very large community
 
-![Events and persons to follow](.gitbook/assets/image%20%28155%29.png)
+![Events and persons to follow](.gitbook/assets/image%20%28156%29.png)
 
 ### Rstudio: an IDE at the top!
 
 Rstudio is the Integrated Development Environment \(IDE\) for R. It is free of charge, easy to use, and configurable. The use of an IDE should save a considerable amount of time. [https://www.rstudio.com/](https://www.rstudio.com/)
 
-![The Rstudio logo](.gitbook/assets/image%20%28134%29.png)
+![The Rstudio logo](.gitbook/assets/image%20%28135%29.png)
 
 The Rstudio IDE is composed of 4 parts: for code edition,for iterative cotrole, for workspace, and for plots.
 
@@ -94,7 +104,7 @@ library(shiny)
 
 There are many publications based-on the Shiny package.
 
-![](.gitbook/assets/image%20%28192%29.png)
+![](.gitbook/assets/image%20%28193%29.png)
 
 Here is the number of articles citing Shiny in Pubmed. It is a great success because the Shiny package was delivered first in 2013!
 
@@ -114,7 +124,7 @@ Here is the architecture of a web application. It is composed of two sides, the 
 
 There is a documented example in the Bioinfo-fr blog.
 
-![](.gitbook/assets/image%20%28120%29.png)
+![](.gitbook/assets/image%20%28121%29.png)
 
 The article \(in french\) is here: [https://bioinfo-fr.net/rendre-ses-projets-r-plus-accessibles-grace-a-shiny](https://bioinfo-fr.net/rendre-ses-projets-r-plus-accessibles-grace-a-shiny) and the code is on GitHub: [https://github.com/bioinfo-fr/bioinfo-fr\_Shiny](https://github.com/bioinfo-fr/bioinfo-fr_Shiny)
 
@@ -127,7 +137,7 @@ For the example, we will use the "Iris data", that are classical data for many R
 * Dataset: IRIS \(measurements on flowers\)
 * Source: [https://archive.ics.uci.edu/ml/datasets/iris](https://archive.ics.uci.edu/ml/datasets/iris)
 
-![An Iris flower](.gitbook/assets/image%20%28137%29.png)
+![An Iris flower](.gitbook/assets/image%20%28138%29.png)
 
 The table is composed of 5 columns:
 
@@ -176,7 +186,7 @@ Save the code: `app.R` \(and of course version with git!\)
 
 In RStudio, click on the "Run App" button:
 
-![](.gitbook/assets/image%20%28138%29.png)
+![](.gitbook/assets/image%20%28139%29.png)
 
 In a terminal \(in the folder with the app.R file\): 
 
@@ -249,7 +259,7 @@ It looks a simple visualization but when compared with the corresponding html co
 
 The different areas of the dashboard are:
 
-![](.gitbook/assets/image%20%28127%29.png)
+![](.gitbook/assets/image%20%28128%29.png)
 
 ### Configure our application
 
@@ -329,7 +339,7 @@ Why do we need to create a file reader ? Because we have to configure the read \
 
 **Result**
 
-![](.gitbook/assets/image%20%28215%29.png)
+![](.gitbook/assets/image%20%28216%29.png)
 
 #### Parameters setting area 
 
@@ -386,7 +396,7 @@ tabItem(tabName = "readData",
 
 **Result**
 
-![](.gitbook/assets/image%20%28182%29.png)
+![](.gitbook/assets/image%20%28183%29.png)
 
 #### Preview area
 
@@ -396,7 +406,7 @@ For the preview area we have to work on both sides, the user interface and the s
 
 Applying of the schema to the preview feature give:
 
-![](.gitbook/assets/image%20%28162%29.png)
+![](.gitbook/assets/image%20%28163%29.png)
 
 To implement this preview feature, we have to compose 4 operations, two on UI side \("File" and "Table display"\) and two on the server side \("File reading" and "Creation of a table display"\).
 
@@ -565,7 +575,7 @@ output$dataTable = DT::renderDataTable({
 
 **Result**
 
-![](.gitbook/assets/image%20%28145%29.png)
+![](.gitbook/assets/image%20%28146%29.png)
 
 ### Adding graphs
 
@@ -593,7 +603,7 @@ tabItem(tabName = "visualization",
 
 **Result**
 
-![](.gitbook/assets/image%20%28140%29.png)
+![](.gitbook/assets/image%20%28141%29.png)
 
 ### Interacte with graphic
 
@@ -615,7 +625,7 @@ output$plotAvecR <- renderPlot({
 
 We use a test \(`if (!is.null(data$table))`\) to avoid the display if we have not read a table.
 
-![](.gitbook/assets/image%20%28206%29.png)
+![](.gitbook/assets/image%20%28207%29.png)
 
 #### Graphical changes
 
@@ -646,7 +656,7 @@ fluidRow(
 
 Which input for which parameter? We can choose input thank to the gallery of examples associated with their code. Look here: [https://shiny.rstudio.com/gallery/widget-gallery.html](https://shiny.rstudio.com/gallery/widget-gallery.html)
 
-![The widget gallery of examples](.gitbook/assets/image%20%28189%29.png)
+![The widget gallery of examples](.gitbook/assets/image%20%28190%29.png)
 
 We choose:
 
@@ -657,11 +667,11 @@ We choose:
 
 Corresponding code for the **UI side**:
 
-![](.gitbook/assets/image%20%28191%29.png)
+![](.gitbook/assets/image%20%28192%29.png)
 
 **Result**
 
-![](.gitbook/assets/image%20%28107%29.png)
+![](.gitbook/assets/image%20%28108%29.png)
 
 and code for the **server side**:
 
@@ -774,4 +784,8 @@ Thanks to R's strong collaborative development, we are convinced that R is a ver
 Add a page to the shiny application based on `iris` data to specify the version of the packages used.
 
 Change the dataset and add graphs \(for example, a correlation between 2 replicates?\)
+
+## Resources
+
+[Programming with R](http://swcarpentry.github.io/r-novice-inflammation) or [R for Reproducible Scientific Analysis](http://swcarpentry.github.io/r-novice-gapminder) :  the Software Carpentry course
 

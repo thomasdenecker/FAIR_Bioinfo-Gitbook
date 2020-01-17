@@ -33,15 +33,15 @@ How to increase our computing power?
 
 ### Zoom on CPU
 
-![50 years of CPU evolution: 1 core - 1971, 10 cores in 2019 \(MIPS: Million Instructions Per Second\)](.gitbook/assets/image%20%28216%29.png)
+![50 years of CPU evolution: 1 core - 1971, 10 cores in 2019 \(MIPS: Million Instructions Per Second\)](.gitbook/assets/image%20%28217%29.png)
 
 The CPU \(Central Processing Unit\) also nammed processor is the component that executes instructions. A processor is composed of one or more cores: 1 core runs 1 instruction, n cores run n instructions in parallel. 
 
-![A quadricore motherborad](.gitbook/assets/image%20%28132%29.png)
+![A quadricore motherborad](.gitbook/assets/image%20%28133%29.png)
 
 In our case, we have many instructions, we can use many cores!
 
-![Comparison of the linear execution of a workflow that can be parallelized on programs 2 and 3.](.gitbook/assets/image%20%28209%29.png)
+![Comparison of the linear execution of a workflow that can be parallelized on programs 2 and 3.](.gitbook/assets/image%20%28210%29.png)
 
 ### How to parallelize?
 
@@ -71,13 +71,13 @@ Definition of a rule:
 * output files
 * code to switch from input files to output files
 
-![A Snakemake rule](.gitbook/assets/image%20%28184%29.png)
+![A Snakemake rule](.gitbook/assets/image%20%28185%29.png)
 
 Snakemake must know the future so there is an order to present the rules in the snakemake file: the first rule specify the files we want at the end \(target/target\) and next, we write the rules to achieve this.
 
 The Snakemake will search for its execution order of rule based on the input and output files of each rule.
 
-![Snakemake execution order](.gitbook/assets/image%20%28115%29.png)
+![Snakemake execution order](.gitbook/assets/image%20%28116%29.png)
 
 ### Comparison of the workflow and the rules flux
 
@@ -91,7 +91,7 @@ If we want to represent all the instructions for our 6 inputs to be treated we o
 
 Snakemake provides an equivalent view but automatically created from the rule file:
 
-![Data flow provided by Snakemake](.gitbook/assets/image%20%28149%29.png)
+![Data flow provided by Snakemake](.gitbook/assets/image%20%28150%29.png)
 
 The Snakemake commad to obtain this view is:
 
@@ -342,7 +342,7 @@ And wait...
 
 Here we propose you to replace the wget command we used to download the input data files by the aspera command. Aspera is faster than wget but as the recovered file can be corrupted, we have to check it! And since Aspera does not work on all servers, it should be coupled with another method.
 
-We modify the part of data download \(see part "Automation of data downloading: the loop concept", in the Chater "Install and play with analysis tools"\) to use Aspera:
+We modify the part of data download \(see part "Automation of data downloading: the loop concept", in the Chater "Play with analysis tools"\) to use Aspera:
 
 ```text
 for j in $(tail -n +2 ../../conditions.txt)
@@ -450,7 +450,7 @@ As for using a cloud, you need an account on a cluster resource. Once you have y
 
 Singularity ****which is also an image-based container system, is used to avoid the need of root rights and will allow you to set the environment. It can exploit docker images.
 
-![](.gitbook/assets/image%20%28147%29.png)
+![](.gitbook/assets/image%20%28148%29.png)
 
 #### File to launch on a cluster
 
@@ -458,7 +458,7 @@ On a cluster, jobs are launched on a batch mode, _ie_. they are placed in a queu
 
 We present you how to write the file to launch jobs on a cluster for two kinds of scheduler, slurm \(Simple Linux Utility for Resource Management\) and PBS \(Portable Bash System\). If the scheduler of your cluster resource is not one of these two, you have to adapt the functions to your scheduler. Their syntax are a little different but schedulers share the same philosophy. 
 
-![Logo of the slurm scheduler](.gitbook/assets/image%20%28154%29.png)
+![Logo of the slurm scheduler](.gitbook/assets/image%20%28155%29.png)
 
 The roles of a scheduler concern:
 
@@ -475,13 +475,13 @@ The file to write may contains both the details of the processing to carry out \
 
    * redirection file of the standard output renamed with the job ID:  `#SBATCH -o slurm.%N.%N.%j.out`
    *  redirection of the standard error file renamed with the job ID:  `#SBATCH -e slurm.%N.%N.%j.err`
-   *  choice of calculation nodes/queues \(ex. "fast" =&gt; the calculation will be stopped after n hours ; the names depend on each resource\):  `#SBATCH --partition fast`
+   *  choice of calculation nodes/queues \(ex. "fast" =&gt; the calculation will be stopped after n hours ; the names and constraints depend on each computer resource\):  `#SBATCH --partition fast`
    * number of reserved CPUs \(ex. 6 CPUs\): `#SBATCH --cpus-per-task 6`
    * RAM reservation \(ex. 24 Go\): `#SBATCH --mem 24GB`
 
 
 
-   3. Launching the docker and `FAIR_script.sh` script
+   3. Launching the docker and the `FAIR_script.sh` script :
 
    ```text
    $ singularity exec -B $PWD:/home/rstudio fair_bioinfo.simg bash ./FAIR_script.sh
@@ -514,21 +514,23 @@ cd /home/thomas.denecker/FAIR_Bioinfo/
 singularity exec -B /home/thomas.denecker/FAIR_Bioinfo/:/home/rstudio fair_bioinfo.simg bash ./FAIR_script.sh
 ```
 
-#### Steps to launch the analysis workflow on a cluster
+#### Steps to launch the analysis workflow on a cluster:
 
 1. Connect to the cluster through ssh \(open a terminal on your local machine\): `ssh YourUserID@YourClusterIPAccess`
 2. Recovery of the project on Github: `git clone https://github.com/thomasdeneker/FAIR_Bioinfo.git`  
 3. Moving around the project repository: `cd FAIR_Bioinfo`
 4. Recovery of the container image with singularity: `singularity pull docker://tdenecker/fair_bioinfo`
-5. Launching the workflow: `sbatch fair_bioinfo.slurm` or `qsub fair_bioinfo.qsub`
+5. Launching the workflow \(depending on the scheduler\): `sbatch fair_bioinfo.slurm` or `qsub fair_bioinfo.qsub`
 6. File recovery from cluster to local \(from a terminal on your local machine\): `scp YourUserID@YourClusterIPAccess:FAIR_Bioinfo/countTable.txt countTable.txt`
 
 ## What about the calculation time?
 
-|  | machine 1 on cloud | machine 2 on cloud | cluster |
+|  | a small machine on cloud | a big machine on cloud | cluster |
 | :--- | :--- | :--- | :--- |
 | Machine configuration | 1 CPU, 2 Go RAM | 8 CPUs, 32 Go RAM | 6 CPUs, 32Go RAM |
 | Duration of the analysis | 1 hour and 23 minutes | 28 minutes | 22 minutes |
+
+We save some times using the cluster. Here we have only 6 input files but the more we have input files, the more the cluster solution will save time.
 
 ## Conclusion
 
@@ -547,5 +549,5 @@ We are confident that: **FAIR raw data** associated to **"FAIR\_bioinfo" scripts
 
 ## It's up to you!
 
-Run the analysis on the cluster or on a VM in parallel
+Run the analysis on the cluster or on a VM in parallel.
 

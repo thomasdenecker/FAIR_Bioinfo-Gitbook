@@ -53,13 +53,13 @@ In short, everything must be described and justified so that another researcher 
 
 There is a real problem of reproducibility in Biology. **70 %** analyses in Experimental Biology are not reproducible \([Monya Baker, Nature, 2016](https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970)\). 
 
-![Monya Baker, Nature, 2016](.gitbook/assets/image%20%28167%29.png)
+![Monya Baker, Nature, 2016](.gitbook/assets/image%20%28168%29.png)
 
 #### In computer science
 
 The same problem is described in computer science \([Collberg et al, University of Arizona TR 14-04, 2015](http://reproducibility.cs.arizona.edu/)\). Here, there is 65% failure to reuse the software.
 
-![Collberg et al, University of Arizona TR 14-04, 2015](.gitbook/assets/image%20%28146%29.png)
+![Collberg et al, University of Arizona TR 14-04, 2015](.gitbook/assets/image%20%28147%29.png)
 
 #### In Bioinformatics
 
@@ -79,7 +79,7 @@ Bioinformatics is also affected... Problems still too frequent such as for exa
 
 Fortunately, there are solutions and FAIR\_Bioinfo is here to offer you one! To try to solve its reproducibility problems, we will use development solutions.
 
-![Some tools discussed in the FAIR\_Bioinfo](.gitbook/assets/image%20%28129%29.png)
+![Some tools discussed in the FAIR\_Bioinfo](.gitbook/assets/image%20%28130%29.png)
 
 ## FAIR principles
 
@@ -111,7 +111,7 @@ To make scripts and protocols in Bioinformatics more reproducible, we base our a
 
 In the end, our creed is SO FAIR. From raw FAIR data, we will apply scripts and protocols that follow the FAIR\_Bioinfo principles. The objective is to obtain FAIR-processed data. 
 
-![Our creed : So FAIR !](.gitbook/assets/image%20%28195%29.png)
+![Our creed : So FAIR !](.gitbook/assets/image%20%28196%29.png)
 
 ## On the training program
 

@@ -275,3 +275,7 @@ conda config --add channels bioconda
 conda install -y fastqc bowtie2 htseq samtools
 ```
 
+## Ressources
+
+
+

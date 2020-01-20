@@ -352,7 +352,7 @@ And wait...
 
 Here we propose you to replace the wget command we used to download the input data files by the aspera command. Aspera is faster than wget but as the recovered file can be corrupted, we have to check it! And since Aspera does not work on all servers, it should be coupled with another method.
 
-We modify the part of data download \(see part "Automation of data downloading: the loop concept", in the Chater "Play with analysis tools"\) to use Aspera:
+We modify the part of data download \(see part "Automation of data downloading: the loop concept", in the Chapter "Play with analysis tools"\) to use Aspera:
 
 ```text
 for j in $(tail -n +2 ../../conditions.txt)
@@ -544,11 +544,11 @@ We save some times using the cluster. Here we have only 6 input files but the mo
 
 ## Conclusion
 
-In this Chapter, we gain in reproducibility and speed. We realize the:
+In this chapter, we gain in reproducibility and speed. We realize the:
 
 * Implementation of an automatic workflow system
 * Use of the parallelization power
-* Increasing the performance of a dock worker
+* Increasing the performance of the docker by using aspera for the input data download
 * Use of a computing cluster
 
 Parallelization associated to the use of a cluster are two solutions that decrease the analysis time and may be seen as:

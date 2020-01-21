@@ -281,7 +281,7 @@ We can create an image from solutions like [GUIX](https://guix.gnu.org/) that fr
 
 #### Consequences
 
-The calculation time ! is a Job in 1 hour exactly the same as the same job but done in 3 hours!
+The calculation time ! Is a Job in 1 hour exactly the same as the same job but done in 3 hours!
 
 Are the results the same?
 

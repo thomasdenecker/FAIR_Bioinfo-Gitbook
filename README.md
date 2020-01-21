@@ -102,10 +102,10 @@ FAIR data are data which meet standards of findability, accessibility, interoper
 
 FAIR data concerns best practices to manage data and there is many documentations about this. Here we argue that the processes should also be "FAIR". We "divert" FAIR principles from data to processes as follows:
 
-* **Findable:** the tools used to perform the analysis workflow are the most common tools used in this field and it is easy to find them \(Github pages\)
+* **Findable:** The tools used are references in their field and it is easy to find the analysis protocol \(Github pages\)
 * **Accessible:** all ressources are available \(code stand in Github and Dockerhub\)  , based on open source tools \(conda\)
-* **Interoperable:** the different tools will communicate with each other, cooperation of tools \(snakemake, docker\) both locally and on servers \(cloud or cluster\)
-* **Reutilisable / Reproducible:** the protocol can be simply replayed \(snakemake\) in the same way \(Rmarkdown\) in a virtual environment \(docker\)  . Its execution replays the entire analysis identically
+* **Interoperable:** The different tools will communicate with each other, cooperation of tools \(snakemake, docker\) both locally and on servers \(cloud or cluster\)
+* **Reutilisable / Reproducible:** The protocol can be simply replayed \(snakemake\) in the same way \(Rmarkdown\) in a virtual environment \(docker\)  . Its execution replays the entire analysis identically
 
 To make scripts and protocols in Bioinformatics more reproducible, we base our approach on the principles of FAIR. Thus, we follow the following principles :
 

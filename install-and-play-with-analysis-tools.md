@@ -246,6 +246,10 @@ conda install -y bowtie2 htseq samtools
 
 and that's all!
 
+## Conclusion
+
+In this chapter, we have quickly reviewed the different tools for the analysis workflow. While trying to install the first tool manually, we noticed the advantage of using a package manager for the installation of all tools. We are now able to create the guidance file for these installations from which we will be able to automatically perform all installations of the analysis workflow tools.
+
 ## It's up to you! 
 
 {% hint style="success" %}
@@ -277,5 +281,6 @@ conda install -y fastqc bowtie2 htseq samtools
 
 ## Ressources
 
-
+* Turorial for each tool of the analysis workflow : [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/), [bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml), [IGV](https://software.broadinstitute.org/software/igv/UserGuide), [Samtools](http://www.htslib.org/doc/samtools.1.html), [HTSeq](https://htseq.readthedocs.io), [DESeq2](http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html) \([SARtools](https://github.com/PF2-pasteur-fr/SARTools)\) 
+* The [Conda](https://conda.io/en/latest/) documentation
 

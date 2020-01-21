@@ -132,7 +132,7 @@ Finally, Git allows you to take a picture at a given time. Let's take the exampl
 
 #### Inform git to track files? `git add`
 
-With `git add` , you will specify who will be in the picture. For example, you only want to see the changes of the children. So you're going to tell all the kids to come to the picture. It is the same principle for files. You specify which ones you want to version. Here, you want to version the file `test.txt` :
+With `git add` , you will specify "who" will be in the picture. For example, you only want to see the  children. So you're going to tell all the kids to come to the picture \(`git add`\). It is the same principle for files. You specify which ones you want to version. Here, you want to version the file `test.txt` \(look the last line\):
 
 ```bash
 $ git add test.txt
@@ -410,7 +410,7 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 ### The changes cycle with a remote repository
 
-With a remote repository, the cycle to manage changes becomes: "i\) `git add myfile`, ii\) `git commit -m mycomment`, and iii\) **`git push origin master`**". Here, an example of cycle of change with creating a new file \(with the bash`cat` command\):
+With a remote repository, the cycle to manage changes becomes: "i\) `git add myfile`, ii\) `git commit -m "mycomment"`, and iii\) **`git push origin master`**". Here, an example of cycle of change with creating a new file \(with the bash`cat` command\):
 
 ```text
 $ cat test.txt
@@ -424,7 +424,7 @@ Changes for Github
 
 $ git add test.txt
 
-$ git commit -m "Changes for Github"
+$ git commit -m "My commit"
 
 $ git push origin master
 Counting objects: 3, done.
@@ -436,6 +436,14 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/thomasdenecker/DemoGit.git
    c334c8b..aefd13a  master -> master
 ```
+
+![Development cycle with GitHub](.gitbook/assets/fair_github_devcycle.png)
+
+If we reuse the analogy with the photograph of the family meal, it is possible to associate the stages of the development cycle in this way:
+
+* choose the people on the final photograph: add the files to be versioned \(`git add <files>`\)
+* once the photograph is printed, reminder the date and the names of the people: add comments \(`git commit -m "comment"`\)
+* paste the photograph into the photo album: save all this in the repository \(`git push origin master`\)
 
 ### Working with collaborators
 
@@ -632,6 +640,10 @@ To https://github.com/thomasdenecker/Fair_project.git
 {% hint style="danger" %}
 Here we already had a repository to import to github. But, the best practice is rather to start by creating the git framework before creating the script that structures the project.
 {% endhint %}
+
+## Conclusion
+
+In this chapter we have seen how to version our code files and how to share them with the developer community. We applied this versioning to the code from the previous chapter \(code for creating the project architecture and uploading input files\).
 
 ## It's up to you
 

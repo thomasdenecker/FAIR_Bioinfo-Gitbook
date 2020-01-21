@@ -688,6 +688,8 @@ plot(data$table$Petal.Length[input$dataTable_rows_all],
 
 Et voilà!
 
+You can try this example with[ https://github.com/thomasdenecker/FAIR\_Bioinfo/ExampleShinyApp.txt](https://github.com/thomasdenecker/FAIR_Bioinfo/blob/master/ExampleShinyApp.txt) file.
+
 Even more reproducibility? It would be necessary to add the numbers of the packages used.
 
 ### Example of the FAIR\_Bioinfo application

@@ -17,7 +17,7 @@ The manual installation of FastQC is not meant to be successful but is there for
 
 ## Presentation of workflow tools
 
-We already show you a global view of the analysis workflow \(in the chapter [_It's not magic_](https://app.gitbook.com/@fair-bioinfo/s/fair-bioinfo/its-not-magic#a-workflow-to-reply-the-scientific-question)\). We will briefly present the fonctionality of each of those tools.
+We already show you a global view of the analysis workflow \(in the chapter [_It's not magic_](https://app.gitbook.com/@fair-bioinfo/s/fair-bioinfo/its-not-magic#a-workflow-to-reply-the-scientific-question)\). We will briefly present the functionality of each of those tools \(ie. individual commands, choice of parameters, or alternative choices of these parameters will not be detailed\) because our learning objectives concern more reproducibility concepts than RNA-seq analysis. For those who would like, we provide links in the last section \(Resources\) to several courses on RNAseq analysis and also to the tutorials of the tools.
 
 ### Reads quality control with FastQC
 
@@ -281,6 +281,7 @@ conda install -y fastqc bowtie2 htseq samtools
 
 ## Ressources
 
-* Turorial for each tool of the analysis workflow : [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/), [bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml), [IGV](https://software.broadinstitute.org/software/igv/UserGuide), [Samtools](http://www.htslib.org/doc/samtools.1.html), [HTSeq](https://htseq.readthedocs.io), [DESeq2](http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html) \([SARtools](https://github.com/PF2-pasteur-fr/SARTools)\) 
+* More on RNA-seq analysis: a review \([A survey of best practices for RNA-seq data analysis](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8)\) and 3 detailled courses: i\) the [RNA-seq Analysis Workshop Course](https://chagall.med.cornell.edu/RNASEQcourse/) of the Weill Cornell Medical College, ii\) the [RNA-seqlopedia](https://rnaseq.uoregon.edu) of the Oregon University, iii\) and from the [Griffith Lab](https://rnabio.org/). 
+* Tutorial for each tool of the analysis workflow : [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/), [bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml), [IGV](https://software.broadinstitute.org/software/igv/UserGuide), [Samtools](http://www.htslib.org/doc/samtools.1.html), [HTSeq](https://htseq.readthedocs.io), [DESeq2](http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html) \([SARtools](https://github.com/PF2-pasteur-fr/SARTools)\) 
 * The [Conda](https://conda.io/en/latest/) documentation
 

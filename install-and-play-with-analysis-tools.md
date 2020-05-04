@@ -1,8 +1,8 @@
 ---
 description: >-
-  Presentation of the workflow tools, test to install by hand the first one.
-  Then, presentation and installation of conda, a tool that help install other
-  tools.
+  We rapidly present each tool of the analysis workflow. We try to install by
+  hand the first one. Then, we present and install conda, a tool that help
+  install other tools.
 ---
 
 # Play with analysis tools
@@ -93,7 +93,7 @@ At this stage, we have sam files. These are large files and it is possible and d
 1. selecting only reads we want: reads that do not align and reads that align in several places due to repeated regions will not be kept
 2. compressing the file: convert the `.sam` format onto the `.bam` \(**b**inary **a**lign **m**ap\) format
 
-A bam file is no longer readable by humans but is lighter than its corresponding sam file:
+A bam file is no longer readable by humans but is lighter than its corresponding sam file \(see the reduction in Mo, Mega octets\):
 
 ![Reduction of a sam file by converting it into bam format](.gitbook/assets/image%20%28111%29.png)
 

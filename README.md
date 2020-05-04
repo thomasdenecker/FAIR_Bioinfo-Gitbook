@@ -127,8 +127,6 @@ If you are reading this, you are trying to answer the following question:
 
 **What are the solutions to be more reproducible in Bioinformatics?**
 
-If you are reading this, you are trying to answer the following question: What are the solutions to be more reproducible in Bioinformatics?
-
 ![](.gitbook/assets/image%20%2822%29.png)
 
 {% hint style="info" %}

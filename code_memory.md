@@ -1,7 +1,7 @@
 ---
 description: >-
-  Presentation of the Git tool and the Github web-based service, application by
-  saving on Github the code of the previous chapter.
+  We present the Git tool and the Github web-based service. We then apply by
+  saving on Github the script written during the previous chapter.
 ---
 
 # The code memory

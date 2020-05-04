@@ -161,7 +161,7 @@ Here is the schedule of the 8 sessions presented with the objectives of acquirin
   * FAIR: valuation \(Jupyter\) sharing \(Binder\)
   * WF: Rmarkdown to create the notebook of the shiny application
 * **Session 8: Expose your project**
-  * FAIR: Projet end \(Githubpages, License, Release, DOI\)
+  * FAIR: Project end \(Githubpages, License, Release, DOI\)
   * WF: your own data and project
 
 We conducted this course in 8 sessions of one and a half hours each, with one chapter presented per session, and a session by month. The course has been built in such a way as to be able to use all the lines of code presented but, depending on the ease of the audience in unix commands \(and sometimes connection times\), it is then preferable to count 2h30 for each session. The auditors were fellow biologists or bioinformaticians from our research institute. 

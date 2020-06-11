@@ -5,7 +5,7 @@ A recent study published in Nature has shown that nearly 70% of experiments in B
 {% hint style="info" %}
 This course is Open Source \(under the Creative Commons  license : Attribution-ShareAlike 4.0 International\). You can find it on the Creative Commons website : [here](https://creativecommons.org/licenses/by-sa/4.0/).
 
-This GitHub link is the place where contributors can interact with the authors of this gitbook by posting remark or comments \([GitHub issues](https://github.com/thomasdenecker/FAIR_Bioinfo/issues)\).
+The following GitHub link is the place where contributors can interact with the authors of this gitbook by posting remark or comments: [GitHub issues](https://github.com/thomasdenecker/FAIR_Bioinfo/issues).
 {% endhint %}
 
 ## Objectives

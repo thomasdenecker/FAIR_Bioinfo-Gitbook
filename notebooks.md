@@ -755,7 +755,7 @@ Add in the application seen at the previous session a button that generates a No
 
 ## Resources
 
-* [Jupyter notebook](https://jupyter-notebook.readthedocs.io/en/latest/)
+* [Jupyter notebook](https://jupyter-notebook.readthedocs.io/en/latest/) documentation, or also a [Dataquest tutorial](https://www.dataquest.io/blog/jupyter-notebook-tutorial/) for beginners.
 * [Markdown](https://guides.github.com/features/mastering-markdown/)
 * [Rmarkdown](https://rmarkdown.rstudio.com/lesson-1.html)
 

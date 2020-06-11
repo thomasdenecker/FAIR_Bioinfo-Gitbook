@@ -3,9 +3,9 @@
 A recent study published in Nature has shown that nearly 70% of experiments in Biology are not reproducible. It is therefore essential to put in place good practices to ensure data integrity and reproducibility of analytical results. Concerning data, the FAIR-data principles are increasingly being used. These same principles can be used in the analysis department to guarantee identical results from the same data set and over time ... The objective of this document is to propose a range of functionalities to make a complete bioinformatics analysis reproducible. 
 
 {% hint style="info" %}
-This course is Open Source \(under the CeCILL 2.1 license\). You can find it on the github of the FAIR\_Bioinfo project: [here](https://github.com/thomasdenecker/FAIR_Bioinfo/blob/master/LICENCE).
+This course is Open Source \(under the Creative Commons  license : Attribution-ShareAlike 4.0 International\). You can find it on the Creative Commons website : [here](https://github.com/thomasdenecker/FAIR_Bioinfo/blob/master/LICENCE).
 
-This github link is also the place where contributors will interact with the authors of this gitbook by posting remark or comments \(github issues\).
+The following GitHub link is the place where contributors can interact with the authors of this gitbook by posting remark or comments: [GitHub issues](https://github.com/thomasdenecker/FAIR_Bioinfo/issues).
 {% endhint %}
 
 ## Objectives

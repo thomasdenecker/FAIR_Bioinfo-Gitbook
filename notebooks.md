@@ -12,6 +12,12 @@ Information for trainers:
 We present the Jupyter notebook \(and its association with Github and binder\) because it is a very used notebook, but due to the Rshiny part of the application, our notebook is writen in Rmarkdown. So in case of lack of time, it is possible to focus only on the "Markdown", "Rmarrkdown", and "Rmarkdown and Shiny" parts.
 {% endhint %}
 
+With the data processing workflow followed by the gene expression differential and its exploration under R, we have completed our RNAseq data analysis project. A new step for reproducibility is to associate explanations to the codes we have produced. One solution for this lies in the use of third-party software called _notebook_. We first present the language used by these software packages and then two of the most widely used ones, Jupyter or Rmarkdown . Both allow the addition of explanations associated with the codes. You just have to choose the one with which you have more affinities.
+
+For each of the two notebooks, we also briefly present some complementary solutions that add important characteristics for reproducibility. For Jupyter, we mention binder which allows to associate a Github repository with Jupyter and thus act at each code modification. We also mention JupyterLab, a way to create Jupyter notebooks. We extend the presentation of Rmarkdown by the RShiny package which allows to define a dynamic visualization of the results according to the user's actions.
+
+Translated with www.DeepL.com/Translator \(free version\)
+
 ## What's a notebook?
 
 It is an interactive programming interface that allows you to combine sections in natural language and sections in computer language.
@@ -48,11 +54,7 @@ Markdown also has his cheat sheet \([here](https://guides.github.com/pdfs/markdo
 
 **Rendering**
 
-## Title level 1
-
-### Title level 2
-
-#### Title level 3
+![](.gitbook/assets/fair_markdowntitles.png)
 
 ### Italic and bold
 
@@ -756,7 +758,7 @@ Add in the application seen at the previous session a button that generates a No
 ## Resources
 
 * [Jupyter notebook](https://jupyter-notebook.readthedocs.io/en/latest/) documentation, or also a [Dataquest tutorial](https://www.dataquest.io/blog/jupyter-notebook-tutorial/) for beginners.
-* [Markdown](https://guides.github.com/features/mastering-markdown/)
+* [Markdown](https://guides.github.com/features/mastering-markdown/) and [Markdown cheatsheet syntax](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 * [Rmarkdown](https://rmarkdown.rstudio.com/lesson-1.html)
 
 

@@ -17,7 +17,7 @@ The manual installation of FastQC is not meant to be successful but is there for
 
 ## Presentation of workflow tools
 
-We already show you a global view of the analysis workflow \(in the chapter [_It's not magic_](https://app.gitbook.com/@fair-bioinfo/s/fair-bioinfo/its-not-magic#a-workflow-to-reply-the-scientific-question)\). We will briefly present the functionality of each of those tools \(ie. individual commands, choice of parameters, or alternative choices of these parameters will not be detailed\) because our learning objectives concern more reproducibility concepts than RNA-seq analysis. For those who would like, we provide links in the last section \(Resources\) to several courses on RNAseq analysis and also to the tutorials of the tools.
+We already show you a global view of the analysis workflow \(in the chapter [_It's not magic_](https://app.gitbook.com/@fair-bioinfo/s/fair-bioinfo/its-not-magic#a-workflow-to-reply-the-scientific-question)\). We will present the functionality of each of those tools briefly \(ie. individual commands, choice of parameters, or alternative choices of these parameters will not be detailed\) because our learning objectives concern more reproducibility concepts than RNA-seq analysis. The specific command for each step of the analysis will be given in the chapter "I've got the power". Nor will we present possible adaptations for other datasets or other biological issues than the one we use throughout this training. For those who would like going more deeper on each step, we provide links to several courses on RNAseq analysis and also to the tutorials of the tools into the last section, "Ressources" of this chapter.
 
 ### Reads quality control with FastQC
 

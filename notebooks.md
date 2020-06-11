@@ -16,8 +16,6 @@ With the data processing workflow followed by the gene expression differential a
 
 For each of the two notebooks, we also briefly present some complementary solutions that add important characteristics for reproducibility. For Jupyter, we mention binder which allows to associate a Github repository with Jupyter and thus act at each code modification. We also mention JupyterLab, a way to create Jupyter notebooks. We extend the presentation of Rmarkdown by the RShiny package which allows to define a dynamic visualization of the results according to the user's actions.
 
-Translated with www.DeepL.com/Translator \(free version\)
-
 ## What's a notebook?
 
 It is an interactive programming interface that allows you to combine sections in natural language and sections in computer language.

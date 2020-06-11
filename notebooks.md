@@ -14,7 +14,7 @@ We present the Jupyter notebook \(and its association with Github and binder\) b
 
 With the data processing workflow followed by the gene expression differential and its exploration under R, we have completed our RNAseq data analysis project. A new step for reproducibility is to associate explanations to the codes we have produced. One solution for this lies in the use of third-party software called _notebook_. We first present the language used by these software packages and then two of the most widely used ones, Jupyter or Rmarkdown . Both allow the addition of explanations associated with the codes. You just have to choose the one with which you have more affinities.
 
-For each of the two notebooks, we also briefly present some complementary solutions that add important characteristics for reproducibility. For Jupyter, we mention binder which allows to associate a Github repository with Jupyter and thus act at each code modification. We also mention JupyterLab, a way to create Jupyter notebooks. We extend the presentation of Rmarkdown by the RShiny package which allows to define a dynamic visualization of the results according to the user's actions.
+For each of the two notebooks, we also briefly present some complementary solutions that add important characteristics for reproducibility. For Jupyter, we mention binder which allows to associate a Github repository with Jupyter and thus act at each code modification. We also mention JupyterLab, a way to create Jupyter notebooks. We extend the presentation of Rmarkdown by the RShiny package that we saw in the LoveR chapter and that can also be used to generate analysis reports in a dynamic way.
 
 ## What's a notebook?
 
